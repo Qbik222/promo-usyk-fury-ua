@@ -1,0 +1,595 @@
+$blue: #01013E
+$blue_2: #000055
+$gray: #E1E1E1
+$gray_2: #E8E8E8
+$gray_3: #ECEAEA
+$magenta: #FF267E
+$white: #fff
+$green: #05C48A
+$green_2: #00BA77
+$green_hover: #05b37c
+$yellow: #C4A505
+$black: #000
+
+//Roboto
+$font-roboto-regular: Roboto-Regular, sans-serif
+$font-roboto-medium: Roboto-Medium, sans-serif
+$font-roboto-bold: Roboto-Bold, sans-serif
+//JosefinSans
+$font-josefin-bold: JosefinSans-Bold, sans-serif
+
+.fav__page
+  position: relative
+  background: $blue
+  color: $white
+  text-align: center
+  letter-spacing: 0.01em
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  img
+    max-width: 100%
+
+.banner
+  display: block
+.info
+  padding: 15px 0 85px
+  .container
+    max-width: 100%
+    &:before
+      content: ''
+      @media screen and (min-width: 701px)
+        background: url("https://favoritpromo.com/html/predictor-fight-hr/img/lightning1.png") no-repeat 0 0/contain
+      @media screen and (max-width: 700px)
+        background: url("https://favoritpromo.com/html/predictor-fight-hr/img/lightning1_mob.png") no-repeat 0 0/contain
+      width: 897px
+      height: 550px
+      position: absolute
+      top: 10%
+      left: -210px
+    &:after
+      content: ''
+      @media screen and (min-width: 701px)
+        background: url("https://favoritpromo.com/html/predictor-fight-hr/img/lightning2.png") no-repeat 0 0/contain
+      @media screen and (max-width: 700px)
+        background: url("https://favoritpromo.com/html/predictor-fight-hr/img/lightning2_mob.png") no-repeat 0 0/contain
+      width: 695px
+      height: 595px
+      position: absolute
+      top: -6%
+      right: -95px
+  &__title,.title
+    font-size: 48px
+    line-height: 60px
+    max-width: 1100px
+    margin: auto
+  &__sum
+    margin: 55px 0 70px
+    padding: 12px 66px 8px
+    font-family: $font-roboto-bold
+    font-size: 80px
+    line-height: 105px
+    background: $magenta
+    border-radius: 100px
+    display: inline-block
+    position: relative
+    z-index: 1
+  &__sub
+    font-family: $font-roboto-bold
+    font-size: 48px
+    line-height: 60px
+    text-transform: uppercase
+    position: relative
+    z-index: 1
+  &__txt
+    margin: 16px auto 0
+    max-width: 650px
+    font-family: $font-roboto-regular
+    font-size: 16px
+    line-height: 28px
+    color: $gray
+    text-transform: uppercase
+
+.step
+  .container
+    max-width: 100%
+    &:before
+      content: ''
+      @media screen and (min-width: 1001px)
+        background: url("https://favoritpromo.com/html/predictor-fight-hr/img/lightning_step_desk.png") no-repeat 0 0/contain
+      @media screen and (min-width: 701px) and (max-width: 1000px)
+        background: url("https://favoritpromo.com/html/predictor-fight-hr/img/lightning_step_tab.png") no-repeat 0 0/contain
+      width: 2280px
+      height: 613px
+      position: absolute
+      top: -14%
+      left: -30px
+      right: 0
+      margin: auto
+  &__list
+    margin: 55px auto 75px
+    max-width: 1072px
+    display: flex
+    justify-content: space-between
+    position: relative
+  &__item
+    padding: 90px 5px 34px
+    width: 280px
+    background: linear-gradient(315deg, rgba(20, 33, 103, 0.4) 0%, rgba(249, 9, 182, 0.4) 100%), linear-gradient(137deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)
+    box-shadow: 0 1px 2px 0 rgba($white, 0.10) inset, 0 20px 40px 0 rgba(0, 0, 0, 0.50)
+    backdrop-filter: blur(10px)
+    border-radius: 20px
+    &-num
+      font-family: $font-roboto-medium
+      font-size: 84px
+      line-height: 60px
+      position: relative
+      &:before
+        content: ''
+        background: url("https://favoritpromo.com/html/predictor-fight-hr/img/step_bg.png") no-repeat 0 0/contain
+        width: 172px
+        height: 195px
+        position: absolute
+        top: -72px
+        left: 0
+        right: 0
+        margin: auto
+        z-index: -1
+    &-descr
+      margin: 40px auto 0
+      max-width: 235px
+      font-family: $font-josefin-bold
+      font-size: 18px
+      line-height: 28px
+      letter-spacing: 0.02em
+      text-transform: uppercase
+      color: $gray_2
+  &__lightning1,&__lightning2,&__lightning3
+    display: none
+  &__details,.drop
+    .dropdown
+      .drop-txt-list
+        overflow-y: auto
+        max-height: none
+        padding-right: 35px
+
+.prediction
+  padding: 85px 0 50px
+  position: relative
+  @media screen and (min-width: 1001px)
+    background: url("https://favoritpromo.com/html/predictor-fight-hr/img/bg_predictor_desk.png") no-repeat 50% 50%/cover
+  @media screen and (min-width: 701px) and (max-width: 1000px)
+    background: url("https://favoritpromo.com/html/predictor-fight-hr/img/bg_predictor_tab.png") no-repeat 0 0/contain
+  @media screen and (max-width: 700px)
+    background: url("https://favoritpromo.com/html/predictor-fight-hr/img/bg_predictor_mob.png") no-repeat 50% 0/contain
+  &__wrapp
+    max-width: 830px
+    margin: 55px auto 40px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+  &__team
+    position: relative
+    z-index: 1
+    &-img
+      width: 233px
+      display: block
+      cursor: pointer
+    &-name
+      margin-top: 15px
+      font-family: $font-roboto-bold
+      font-size: 32px
+      line-height: 37px
+    &-btn
+      &-plus,&-minus
+        width: 66px
+        height: 66px
+        border-radius: 100px
+        background: linear-gradient(315deg, #034F33 0%, #00BA77 100%), linear-gradient(137deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)
+        box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.10) inset, 0 20px 40px 0 rgba(0, 0, 0, 0.50)
+        color: $white
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        cursor: pointer
+        &:before
+          content: ''
+          width: 31px
+          height: 4px
+          background: $white
+          border-radius: 100px
+      &-plus
+        right: 0
+        &:after
+          content: ''
+          width: 31px
+          height: 4px
+          background: $white
+          border-radius: 100px
+          transform: rotate(90deg)
+          position: absolute
+      &-minus
+        left: 0
+  &__flex
+    position: relative
+    width: 310px
+    display: flex
+    justify-content: center
+    align-items: center
+    &:before
+      content: ''
+      background: url("https://favoritpromo.com/html/predictor-fight-hr/img/circle.png") no-repeat 0 0/contain
+      width: 100%
+      height: 310px
+      position: absolute
+      top: -77px
+      left: 6px
+      right: 0
+      margin: auto
+  &__score
+    font-family: $font-roboto-medium
+    font-size: 100px
+    text-transform: uppercase
+    user-select: none
+  &__last
+    margin-top: 40px
+    font-size: 18px
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-transform: uppercase
+    &-wrapp
+      margin-top: 17px
+      display: flex
+      align-items: center
+    &-txt
+      font-family: $font-roboto-medium
+    &-team
+      font-family: $font-roboto-regular
+      color: rgba($white, .5)
+    &-def
+      width: 14px
+      height: 2px
+      margin: 0 10px
+      background: $white
+    &-score
+      letter-spacing: -0.07em
+      font-family: $font-roboto-regular
+      span
+        font-family: $font-roboto-regular
+  &__step
+    text-transform: uppercase
+    font-family: $font-roboto-bold
+    font-size: 22px
+    position: absolute
+    left: 0
+  &__yourBet
+    margin-top: 20px
+    font-family: $font-roboto-bold
+    font-size: 16px
+    letter-spacing: 0.04em
+    text-transform: uppercase
+  &__bet
+    margin-top: 40px
+    display: flex
+    justify-content: center
+    &-true,&-false
+      padding: 12px 35px
+      text-transform: uppercase
+      font-size: 18px
+      line-height: 30px
+      letter-spacing: 0.02em
+      background: linear-gradient(137deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.05) 100%)
+      box-shadow: 0 1px 2px 0 rgba($white, 0.10) inset
+      filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.20))
+      span
+        font-family: $font-roboto-medium
+        display: block
+    &-true
+      color: $green_2
+      border-radius: 10px 0 0 10px
+    &-false
+      color: $yellow
+      border-radius: 0 10px 10px 0
+      border-left: 1px solid #02022C
+  &__btn
+    &:before
+      content: 'Korak 1'
+.wrapp
+  @media screen and (min-width: 1001px)
+    background: url("https://favoritpromo.com/html/predictor-fight-hr/img/bg_desk.png") no-repeat 0 50%/cover
+  @media screen and (min-width: 701px) and (max-width: 1000px)
+    background: url("https://favoritpromo.com/html/predictor-fight-hr/img/bg_tab.png") no-repeat 0 50%/cover
+  @media screen and (max-width: 700px)
+    background: url("https://favoritpromo.com/html/predictor-fight-hr/img/bg_mob.png") no-repeat 0 50%/cover
+  position: relative
+  &:before
+    content: ''
+    background: linear-gradient(0deg, rgba(0, 0, 61, 0.00) 0%, #00003D 100%)
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    width: 100%
+    height: 500px
+.tableResults
+  &__wrapp
+    margin: 40px auto 70px
+    text-align: left
+    border-radius: 20px
+    border: 0.5px solid rgba(239, 239, 239, 0.32)
+    background: rgba(4, 0, 53, 0.45)
+    backdrop-filter: blur(28px)
+  &__head
+    padding: 30px 10px 30px 60px
+    border-bottom: 0.5px solid rgba($white, 0.12)
+    display: flex
+    &-col
+      font-family: $font-roboto-medium
+      font-size: 20px
+      line-height: 23px
+      text-transform: uppercase
+      padding-right: 10px
+      &:nth-child(1)
+        width: 22%
+      &:nth-child(2)
+        width: 28%
+      &:nth-child(3)
+        width: 23%
+      &:nth-child(4)
+        width: 27%
+  &__body
+    margin: 20px 27px 0 0
+    padding: 0 32px 0 60px
+    overflow-y: scroll
+    position: relative
+    max-height: 495px
+    font-size: 18px
+    border-bottom: 30px solid transparent
+    &::-webkit-scrollbar
+      width: 2px
+      height: 80%
+      background: rgba($black, .2)
+      box-shadow: 0 0 4px 0 rgba($black, 0.5) inset
+    &::-webkit-scrollbar-thumb
+      background: #06CFA1
+      border-radius: 8px
+    &-col
+      font-family: $font-roboto-regular
+      padding-right: 10px
+      word-break: break-word
+      &:nth-child(1)
+        width: 23%
+      &:nth-child(2)
+        width: 30%
+      &:nth-child(3)
+        width: 25%
+      &:nth-child(4)
+        width: 20%
+      span
+        font-family: $font-roboto-bold
+        color: $magenta
+        padding-left: 2px
+        font-size: 18px
+        text-transform: lowercase
+  &__row
+    padding: 20px 0
+    word-break: break-all
+    display: flex
+    border-bottom: 0.5px solid rgba($white, 0.12)
+    &:first-child
+      padding-top: 0
+  &__txt
+    margin: 0 auto 55px
+    color: $gray
+    max-width: 670px
+    font-family: $font-roboto-regular
+    font-size: 11px
+    line-height: 18px
+    text-transform: uppercase
+  &__btn
+    &:before
+      content: 'Korak 2'
+
+.rules
+  padding: 55px 0
+
+.drop
+  max-width: 900px
+  margin: auto
+  .dropdown
+    outline: none!important
+    cursor: pointer
+    position: relative
+    z-index: 1
+    text-align: start
+    summary::-webkit-details-marker
+      display: none
+    > summary
+      list-style: none
+    summary
+      padding: 26px 63px 24px 40px
+      font-family: $font-roboto-bold
+      font-size: 20px
+      line-height: 30px
+      outline: none!important
+      position: relative
+      display: flex
+      align-items: center
+      text-transform: uppercase
+      user-select: none
+      background: linear-gradient(137deg, rgba($white, 0.10) 0%, rgba(255, 255, 255, 0.05) 100%)
+      box-shadow: 0 1px 2px 0 rgba($white, 0.10) inset
+      backdrop-filter: blur(10px)
+      border-radius: 20px
+      ::-webkit-details-marker
+        display: none
+      &:after
+        content: ''
+        background: url("https://favoritpromo.com/html/predictor-fight-hr/img/arrow.svg") no-repeat 0 0/contain
+        display: inline-block
+        width: 27px
+        height: 27px
+        position: absolute
+        right: 26px
+        top: 34%
+    &[open]
+      summary
+        &:after
+          transform: rotate(180deg)
+          opacity: .6
+    .drop-txt
+      margin-top: 5px
+      overflow-wrap: break-word
+      font-size: 14px
+      line-height: 22px
+      color: $gray_3
+      padding: 30px 43px 28px 43px
+      text-align: start
+      cursor: auto
+      background: linear-gradient(137deg, rgba($white, 0.1) 0%, rgba($white, 0.05) 100%)
+      border-radius: 20px
+      backdrop-filter: blur(10px)
+      &-list
+        max-height: 500px
+        overflow-y: scroll
+        padding-right: 20px
+        &::-webkit-scrollbar
+          background: rgba($white, .3)
+          width: 3px
+          border-radius: 50px
+        &::-webkit-scrollbar-thumb
+          position: relative
+          border-radius: 50px
+          background: $green
+      p
+        margin-bottom: 10px
+        font-family: $font-roboto-regular
+        display: block
+        &:last-child
+          margin-bottom: 0
+        a
+          color: $green
+          text-decoration: underline
+          font-family: $font-roboto-regular
+          position: relative
+          &:hover
+            text-decoration: none
+      strong
+        margin-bottom: 10px
+        font-size: 16px
+        font-family: $font-roboto-bold
+        color: $white
+        display: block
+      .retreat1
+        padding-left: 20px
+      .retreat2
+        padding-left: 30px
+      .circle
+        padding-left: 20px
+        &:before
+          content: ''
+          width: 4px
+          height: 4px
+          background: $white
+          border-radius: 50%
+          display: inline-block
+          margin: 0 5px 2px 0
+
+
+//const
+.container
+  max-width: 900px
+  width: 100%
+  position: relative
+  margin: auto
+
+.title
+  font-family: $font-roboto-bold
+  font-size: 50px
+  line-height: 68px
+  text-transform: uppercase
+
+.btn
+  min-width: 311px
+  padding: 23px 20px 21px
+  font-family: $font-roboto-bold
+  font-size: 26px
+  text-transform: uppercase
+  letter-spacing: 0.02em
+  text-shadow: 0 1px 1px rgba($black, .4)
+  color: $blue_2
+  background: $green
+  display: inline-block
+  cursor: pointer
+  border-radius: 80px
+  transition: background .3s linear
+  position: relative
+  &:hover
+    background: $green_hover
+  &:before
+    text-transform: uppercase
+    pointer-events: none
+    font-family: $font-roboto-bold
+    font-size: 22px
+    position: absolute
+    left: -115px
+    color: $white
+
+.hide
+  display: none!important
+
+.overflow
+  overflow: hidden!important
+
+.pointer-none
+  pointer-events: none
+
+.disableBtn
+  pointer-events: none
+  background: $gray
+  &:before,&:after
+    background: $blue_2
+
+.block-btn
+  pointer-events: none
+  background: $gray_2
+  color: $blue
+
+.takeUser
+  .prediction__team-name
+    color: $magenta
+
+.showBtn
+  animation: showBtn 5s ease-in-out
+
+.betScale
+  span
+    animation: betScale 3s ease-in-out infinite
+
+.boxerScale
+  animation: boxerScale 0.4s ease forwards
+
+@keyframes showBtn
+  from
+    opacity: 0
+    pointer-events: none
+  to
+    opacity: 1
+    pointer-events: auto
+
+@keyframes betScale
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.1)
+  100%
+    transform: scale(1)
+
+@keyframes boxerScale
+  from
+    transform: scale(1)
+  to
+    transform: scale(1.05)

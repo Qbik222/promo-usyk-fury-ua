@@ -1,0 +1,81 @@
+.fav__page#predictor
+    picture.banner
+        source(media="(min-width: 1001px) and (max-width: 1800px)" srcset="https://favoritpromo.com/html/predictor-fight-hr/img/banner_desk2.jpg")
+        source(media="(max-width: 920px) and (max-height: 450px)" srcset="https://favoritpromo.com/html/predictor-fight-hr/img/banner_land.jpg")
+        source(media="(min-width: 701px) and (max-width: 1000px)" srcset="https://favoritpromo.com/html/predictor-fight-hr/img/banner_tab.jpg")
+        source(media="(max-width: 700px)" srcset="https://favoritpromo.com/html/predictor-fight-hr/img/banner_mob.jpg")
+        img(src="https://favoritpromo.com/html/predictor-fight-hr/img/banner_desk.jpg", alt="FAVBET")
+    .info
+        .container
+            .info__title.title(data-translate="infoTitle")
+            .info__sum(data-translate="infoSum")
+            .info__sub(data-translate="infoSub")
+            .info__txt(data-translate="infoTxt")
+    .step
+        .container
+            .step__title.title(data-translate="stepTitle")
+            .step__list
+                .step__item
+                    .step__item-num 1
+                    .step__item-descr(data-translate="step-1")
+                .step__item
+                    .step__item-num 2
+                    .step__item-descr(data-translate="step-2")
+                .step__item
+                    .step__item-num 3
+                    .step__item-descr(data-translate="step-3")
+        .step__details.drop
+            details.dropdown
+                summary(data-translate="stepDetails")
+                .drop-txt
+                    .drop-txt-list(data-translate="stepDetailsList")
+    .prediction
+        .container
+            .prediction__title.title(data-translate="predictionTitle")
+            .prediction__wrapp
+                .prediction__team.player1
+                    picture.prediction__team-img
+                        source(media="(min-width: 701px)" srcset="https://favoritpromo.com/html/predictor-fight-hr/img/boxer1_desk.png")
+                        source(media="(max-width: 700px)" srcset="https://favoritpromo.com/html/predictor-fight-hr/img/boxer1_mob.png")
+                        img(src="https://favoritpromo.com/html/predictor-fight-hr/img/boxer1_desk.png", alt="FAVBET")
+                    .prediction__team-name(data-translate="boxer-1")
+                .prediction__flex
+                    .prediction__score 1
+                    .prediction__team-btn-plus.team2-plus.disableBtn(role="button")
+                    .prediction__team-btn-minus.team2-minus.disableBtn(role="button")
+                .prediction__team.player2
+                    picture.prediction__team-img
+                        source(media="(min-width: 701px)" srcset="https://favoritpromo.com/html/predictor-fight-hr/img/boxer2_desk.png")
+                        source(media="(max-width: 700px)" srcset="https://favoritpromo.com/html/predictor-fight-hr/img/boxer2_mob.png")
+                        img(src="https://favoritpromo.com/html/predictor-fight-hr/img/boxer2_desk.png", alt="FAVBET")
+                    .prediction__team-name(data-translate="boxer-2")
+            a(href="/login/" role="button" data-translate="login").prediction__btn.btn.unauth-msg
+            .prediction__btn.took-part.predictionBtn.btn.hide(role="button" data-translate="predictionBtn")
+            .prediction__yourBet.hide(data-translate="yourBet")
+            .prediction__last.hide
+                .prediction__last-txt(data-translate="lastPrediction")
+                .prediction__last-wrapp
+                    .prediction__last-team(data-translate="boxer-1")
+                    .prediction__last-def
+                    .prediction__last-score
+            .prediction__bet.hide
+                .prediction__bet-true #[span(data-translate="betTrue")]
+                .prediction__bet-false #[span(data-translate="betFalse")]
+    .wrapp
+        .tableResults
+            .container
+                .tableResults__title.title(data-translate="tableTitle")
+                .tableResults__wrapp
+                    .tableResults__head
+                        .tableResults__head-col(data-translate="tableHeadID")
+                        .tableResults__head-col(data-translate="tableHeadDate")
+                        .tableResults__head-col(data-translate="tableHeadPrediction")
+                        .tableResults__head-col(data-translate="tableHeadPrizes")
+                    .tableResults__body
+                .tableResults__txt(data-translate="tableTxt")
+                a(href="/sports/event/boxing/39589725/" target="_blank" role="button" data-translate="tableBtn").tableResults__btn.btn
+        .rules.drop
+            details.dropdown
+                summary(data-translate="terms")
+                .drop-txt
+                    .drop-txt-list(data-translate="termsList")
