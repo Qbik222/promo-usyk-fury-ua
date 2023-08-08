@@ -47,11 +47,6 @@
                 elem.removeAttribute('data-translate');
             })
         }
-
-        if (locale === 'en') {
-            mainPage.classList.add('en');
-        }
-
         refreshLocalizedClass();
     }
 
@@ -152,7 +147,7 @@
 
         const translationKey = 'boxer-' + user.player;
         const player = translateKey(translationKey);
-        const prediction = user.score == 0 ? JUDGE_DECISION_OPTION : user.score + ' rundi';
+        const prediction = user.score == 0 ? JUDGE_DECISION_OPTION : user.score + ' runda';
 
         additionalUserRow.innerHTML = `
                         <div class="tableResults__body-col">${maskUserId(user.userid)} ${isCurrentUser ? '<span data-translate="you">(ТИ)</span>' : ''}</div>
@@ -170,7 +165,7 @@
         predictedPlayerDiv.innerHTML = player;
 
         const scoreDiv = document.querySelector('.prediction__last-score');
-        scoreDiv.innerHTML = data.score == 0 ? JUDGE_DECISION_OPTION : `<span class="scoreTeam1">${data.score} </span>` + 'rundi';
+        scoreDiv.innerHTML = data.score == 0 ? JUDGE_DECISION_OPTION : `<span class="scoreTeam1">${data.score} </span>` + 'runda';
 
         const lastPrediction = document.querySelector('.prediction__last');
         lastPrediction.classList.remove('hide');
