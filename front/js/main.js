@@ -19,7 +19,7 @@
 
     let i18nData = {};
     let userId;
-    // userId = 7777777;
+    // userId = 1515718;
 
     function loadTranslations() {
         return fetch(`${apiURL}/translates/${locale}`).then(res => res.json())
@@ -153,7 +153,7 @@
                         <div class="tableResults__body-col">${maskUserId(user.userid)} ${isCurrentUser ? '<span data-translate="you">(ТИ)</span>' : ''}</div>
                         <div class="tableResults__body-col">${formatDateString(user.lastForecast)}</div>
                         <div class="tableResults__body-col">${player} - ${prediction}</div>
-                        <div class="tableResults__body-col">***</div>
+                        <div class="tableResults__body-col">${translateKey("not_fulfilled")}</div>
                     `;
         table.append(additionalUserRow);
     }
@@ -171,7 +171,7 @@
         lastPrediction.classList.remove('hide');
 
         const predictionStatusDiv = document.querySelector('.prediction__bet');
-        predictionStatusDiv.classList.remove('hide');
+        // predictionStatusDiv.classList.remove('hide');
 
         const predictionConfirmed = document.querySelector(`.prediction__bet-${data.betConfirmed || false}`);
         predictionConfirmed.classList.add('betScale');
