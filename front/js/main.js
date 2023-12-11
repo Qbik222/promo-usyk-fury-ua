@@ -1,6 +1,6 @@
 (function () {
     const PROMO_END_DATE = new Date('2023-08-12T20:00:00.000Z'); //-3 hours
-    const apiURL = 'https://favoritpromo.com/api_predictor_fight_hr';
+    const apiURL = 'https://fav-prom.com/api_predictor_fight_hr';
     const CHOICES_COUNT = 13;
     const JUDGE_DECISION_OPTION = 'O/S';
 
@@ -39,7 +39,7 @@
     }
 
     function translate() {
-        const elems = document.querySelectorAll('[data-translate]')
+        const elems = document.querySelectorAll('[data-translates]')
         if (elems && elems.length) {
             elems.forEach(elem => {
                 const key = elem.getAttribute('data-translate');
