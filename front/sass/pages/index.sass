@@ -19,6 +19,7 @@ $font-roboto-bold: Roboto-Bold, sans-serif
 $font-josefin-bold: JosefinSans-Bold, sans-serif
 
 .fav__page
+  overflow: hidden
   position: relative
   background: $blue
   color: $white
@@ -37,25 +38,27 @@ $font-josefin-bold: JosefinSans-Bold, sans-serif
     &:before
       content: ''
       @media screen and (min-width: 701px)
-        background: url("https://fav-prom.com/html/predictor-fight-hr/img/lightning1.png") no-repeat 0 0/contain
+        background: url("../img/lightning1.png") no-repeat 0 0/contain
       @media screen and (max-width: 700px)
-        background: url("https://fav-prom.com/html/predictor-fight-hr/img/lightning1_mob.png") no-repeat 0 0/contain
+        background: url("../img/lightning1_mob.png") no-repeat 0 0/contain
       width: 897px
       height: 550px
       position: absolute
       top: 10%
       left: -210px
+      animation: bg-anim-one 4s ease infinite
     &:after
       content: ''
       @media screen and (min-width: 701px)
-        background: url("https://fav-prom.com/html/predictor-fight-hr/img/lightning2.png") no-repeat 0 0/contain
+        background: url("../img/lightning2.png") no-repeat 0 0/contain
       @media screen and (max-width: 700px)
-        background: url("https://fav-prom.com/html/predictor-fight-hr/img/lightning2_mob.png") no-repeat 0 0/contain
+        background: url("../img/lightning2_mob.png") no-repeat 0 0/contain
       width: 695px
       height: 595px
       position: absolute
       top: -6%
       right: -95px
+      animation: bg-anim-one 4s ease infinite
   &__title,.title
     font-size: 48px
     line-height: 60px
@@ -72,6 +75,7 @@ $font-josefin-bold: JosefinSans-Bold, sans-serif
     display: inline-block
     position: relative
     z-index: 1
+    animation: dropShadow 2s ease infinite
   &__sub
     font-family: $font-roboto-bold
     font-size: 48px
@@ -94,9 +98,9 @@ $font-josefin-bold: JosefinSans-Bold, sans-serif
     &:before
       content: ''
       @media screen and (min-width: 1001px)
-        background: url("https://fav-prom.com/html/predictor-fight-hr/img/lightning_step_desk.png") no-repeat 0 0/contain
+        background: url("../img/lightning_step_desk.png") no-repeat 0 0/contain
       @media screen and (min-width: 701px) and (max-width: 1000px)
-        background: url("https://fav-prom.com/html/predictor-fight-hr/img/lightning_step_tab.png") no-repeat 0 0/contain
+        background: url("../img/lightning_step_tab.png") no-repeat 0 0/contain
       width: 2280px
       height: 613px
       position: absolute
@@ -117,14 +121,26 @@ $font-josefin-bold: JosefinSans-Bold, sans-serif
     box-shadow: 0 1px 2px 0 rgba($white, 0.10) inset, 0 20px 40px 0 rgba(0, 0, 0, 0.50)
     backdrop-filter: blur(10px)
     border-radius: 20px
+    &:nth-child(3)
+      .step__item-descr
+        max-width: 170px
+      .step__item-num
+        animation: 2s scaleSteps .9s ease infinite
+    &:nth-child(1)
+      .step__item-num
+        animation: 2s scaleSteps .3s ease infinite
+    &:nth-child(2)
+      .step__item-num
+        animation: 2s scaleSteps .6s ease infinite
     &-num
       font-family: $font-roboto-medium
       font-size: 84px
       line-height: 60px
       position: relative
+      animation: scaleSteps 2s ease infinite
       &:before
         content: ''
-        background: url("https://fav-prom.com/html/predictor-fight-hr/img/step_bg.png") no-repeat 0 0/contain
+        background: url("../img/step_bg.png") no-repeat 0 0/contain
         width: 172px
         height: 195px
         position: absolute
@@ -155,11 +171,11 @@ $font-josefin-bold: JosefinSans-Bold, sans-serif
   padding: 85px 0 50px
   position: relative
   @media screen and (min-width: 1001px)
-    background: url("https://fav-prom.com/html/predictor-fight-hr/img/bg_predictor_desk.png") no-repeat 50% 50%/cover
+    background: url("../img/bg_predictor_desk.png") no-repeat 50% 50%/cover
   @media screen and (min-width: 701px) and (max-width: 1000px)
-    background: url("https://fav-prom.com/html/predictor-fight-hr/img/bg_predictor_tab.png") no-repeat 0 0/contain
+    background: url("../img/bg_predictor_tab.png") no-repeat 0 0/contain
   @media screen and (max-width: 700px)
-    background: url("https://fav-prom.com/html/predictor-fight-hr/img/bg_predictor_mob.png") no-repeat 50% 0/contain
+    background: url("../img/bg_predictor_mob.png") no-repeat 50% 0/contain
   &__wrapp
     max-width: 830px
     margin: 55px auto 40px
@@ -170,11 +186,20 @@ $font-josefin-bold: JosefinSans-Bold, sans-serif
   &__team
     position: relative
     z-index: 1
+    &:first-child
+      .prediction__team-img
+        img
+          animation: 2s dropShadow ease infinite
+    &:last-child
+      .prediction__team-img
+        img
+          animation: 2s dropShadowBlue ease infinite
     &-img
       width: 233px
       display: block
       cursor: pointer
     &-name
+      text-transform: uppercase
       margin-top: 15px
       font-family: $font-roboto-bold
       font-size: 32px
@@ -184,9 +209,8 @@ $font-josefin-bold: JosefinSans-Bold, sans-serif
         width: 66px
         height: 66px
         border-radius: 100px
-        background: linear-gradient(315deg, #034F33 0%, #00BA77 100%), linear-gradient(137deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)
-        box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.10) inset, 0 20px 40px 0 rgba(0, 0, 0, 0.50)
-        color: $white
+        background: #05C48A
+        color: $blue
         display: flex
         justify-content: center
         align-items: center
@@ -198,7 +222,7 @@ $font-josefin-bold: JosefinSans-Bold, sans-serif
           content: ''
           width: 31px
           height: 4px
-          background: $white
+          background: $blue
           border-radius: 100px
       &-plus
         right: 0
@@ -206,7 +230,7 @@ $font-josefin-bold: JosefinSans-Bold, sans-serif
           content: ''
           width: 31px
           height: 4px
-          background: $white
+          background: $blue
           border-radius: 100px
           transform: rotate(90deg)
           position: absolute
@@ -220,28 +244,29 @@ $font-josefin-bold: JosefinSans-Bold, sans-serif
     align-items: center
     &:before
       content: ''
-      background: url("https://fav-prom.com/html/predictor-fight-hr/img/circle.png") no-repeat 0 0/contain
+      background: url("../img/circle.png") no-repeat 0 0/contain
       width: 100%
       height: 310px
       position: absolute
-      top: -77px
+      top: -87px
       left: 6px
       right: 0
       margin: auto
+      animation: 4s dropShadow ease infinite
   &__score
     font-family: $font-roboto-medium
     font-size: 100px
     text-transform: uppercase
     user-select: none
   &__last
-    margin-top: 40px
+    margin-top: 20px
     font-size: 18px
     display: flex
     flex-direction: column
     align-items: center
     text-transform: uppercase
     &-wrapp
-      margin-top: 17px
+      gap: 25px
       display: flex
       align-items: center
     &-txt
@@ -250,12 +275,9 @@ $font-josefin-bold: JosefinSans-Bold, sans-serif
       font-family: $font-roboto-regular
       color: rgba($white, .5)
     &-def
-      width: 14px
-      height: 2px
-      margin: 0 10px
-      background: $white
+      font-family: $font-roboto-regular
     &-score
-      letter-spacing: -0.07em
+      color: rgba($white, .5)
       font-family: $font-roboto-regular
       span
         font-family: $font-roboto-regular
@@ -272,10 +294,11 @@ $font-josefin-bold: JosefinSans-Bold, sans-serif
     letter-spacing: 0.04em
     text-transform: uppercase
   &__bet
-    margin-top: 40px
+    margin-top: 30px
     display: flex
     justify-content: center
     &-true,&-false
+      font-family: $font-roboto-medium
       padding: 12px 35px
       text-transform: uppercase
       font-size: 18px
@@ -299,11 +322,11 @@ $font-josefin-bold: JosefinSans-Bold, sans-serif
       content: 'Korak 1'
 .wrapp
   @media screen and (min-width: 1001px)
-    background: url("https://fav-prom.com/html/predictor-fight-hr/img/bg_desk.png") no-repeat 0 50%/cover
+    background: url("../img/bg_desk.png") no-repeat 0 50%/cover
   @media screen and (min-width: 701px) and (max-width: 1000px)
-    background: url("https://fav-prom.com/html/predictor-fight-hr/img/bg_tab.png") no-repeat 0 50%/cover
+    background: url("../img/bg_tab.png") no-repeat 0 50%/cover
   @media screen and (max-width: 700px)
-    background: url("https://fav-prom.com/html/predictor-fight-hr/img/bg_mob.png") no-repeat 0 50%/cover
+    background: url("../img/bg_mob.png") no-repeat 0 50%/cover
   position: relative
   &:before
     content: ''
@@ -428,7 +451,7 @@ $font-josefin-bold: JosefinSans-Bold, sans-serif
         display: none
       &:after
         content: ''
-        background: url("https://fav-prom.com/html/predictor-fight-hr/img/arrow.svg") no-repeat 0 0/contain
+        background: url("../img/arrow.svg") no-repeat 0 0/contain
         display: inline-block
         width: 27px
         height: 27px
@@ -530,6 +553,7 @@ $font-josefin-bold: JosefinSans-Bold, sans-serif
   &:hover
     background: $green_hover
   &:before
+    content: none
     text-transform: uppercase
     pointer-events: none
     font-family: $font-roboto-bold
@@ -593,3 +617,35 @@ $font-josefin-bold: JosefinSans-Bold, sans-serif
     transform: scale(1)
   to
     transform: scale(1.05)
+
+@keyframes bg-anim-one
+  0%
+    transform: translateX(-10px) scale(1)
+  50%
+    transform: translateX(10px) scale(1.02)
+  100%
+    transform: translateX(-10px) scale(1)
+
+@keyframes dropShadow
+  0%
+    filter: drop-shadow(0 0 4px $magenta)
+  50%
+    filter: drop-shadow(0 0 15px $magenta)
+  100%
+    filter: drop-shadow(0 0 4px $magenta)
+
+@keyframes dropShadowBlue
+  0%
+    filter: drop-shadow(0 0 4px $blue)
+  50%
+    filter: drop-shadow(0 0 15px $blue)
+  100%
+    filter: drop-shadow(0 0 4px $blue)
+
+@keyframes scaleSteps
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.05)
+  100%
+    transform: scale(1)

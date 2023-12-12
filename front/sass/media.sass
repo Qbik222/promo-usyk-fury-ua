@@ -265,19 +265,19 @@
       display: block
       position: absolute
     &__lightning1
-      background: url("https://fav-prom.com/html/predictor-fight-hr/img/lightning1_step_mob.png") no-repeat 0 0/contain
+      background: url("../img/lightning1_step_mob.png") no-repeat 0 0/contain
       width: 182px
       height: 182px
       top: 55px
       left: -30px
     &__lightning2
-      background: url("https://fav-prom.com/html/predictor-fight-hr/img/lightning2_step_mob.png") no-repeat 0 0/contain
+      background: url("../img/lightning2_step_mob.png") no-repeat 0 0/contain
       width: 310px
       height: 113px
       top: 0
       right: -115px
     &__lightning3
-      background: url("https://fav-prom.com/html/predictor-fight-hr/img/lightning3_step_mob.png") no-repeat 0 0/contain
+      background: url("../img/lightning3_step_mob.png") no-repeat 0 0/contain
       width: 235px
       height: 250px
       right: -115px
@@ -285,6 +285,7 @@
   .prediction
     padding: 60px 0
     &__wrapp
+      max-width: 310px
       justify-content: center
       margin-bottom: 60px
     &__score
@@ -295,15 +296,23 @@
         height: 230px
         top: -70px
     &__team
+      display: flex
+      flex-direction: column
+      align-items: center
       &:first-child
         margin-right: 20px
+      &:last-child
+        margin-bottom: -38px
+        .prediction__team-name
+          max-width: 200px
       &-wrapp
         margin: 160px auto 40px
         max-width: 340px
       &-img
         width: 160px
       &-name
-        margin-top: 40px
+        font-size: 28px
+        margin-top: 20px
       &-btn
         &-plus
           right: -10px
@@ -368,7 +377,7 @@
   .drop
     .dropdown
       summary
-        padding: 12px 35px 9px 16px
+        padding: 12px 35px 11px 16px
         border-radius: 8px
         &:after
           width: 14px
@@ -441,6 +450,10 @@
     &__wrapp
       max-width: 320px
     &__team
+      &:last-child
+        margin-bottom: -27px
+        .prediction__team-name
+           max-width: 110px
       &-img
         width: 124px
       &-name
@@ -454,7 +467,7 @@
         margin-top: 10px
     &__bet
       &-true,&-false
-        padding: 4px 8px 2px
+        padding: 6px 11px 4px
         font-size: 12px
         line-height: 18px
     &__yourBet
