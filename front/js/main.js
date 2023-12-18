@@ -19,7 +19,7 @@
 
     let i18nData = {};
     let userId;
-    // userId = 666666;
+    // userId = 1457027;
 
     function loadTranslations() {
         return fetch(`${apiURL}/translates/${locale}`).then(res => res.json())
@@ -170,8 +170,8 @@
         const lastPrediction = document.querySelector('.prediction__last');
         lastPrediction.classList.remove('hide');
 
-        const predictionStatusDiv = document.querySelector('.prediction__bet');
-        predictionStatusDiv.classList.remove('hide');
+        // const predictionStatusDiv = document.querySelector('.prediction__bet');
+        // predictionStatusDiv.classList.remove('hide');
 
         const predictionConfirmed = document.querySelector(`.prediction__bet-${data.betConfirmed || false}`);
         predictionConfirmed.classList.add('betScale');
