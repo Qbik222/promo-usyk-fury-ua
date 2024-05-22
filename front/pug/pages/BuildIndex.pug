@@ -17,7 +17,7 @@
             img(src="./img/banner_text-desk.png", alt="FAVBET")
     .info
         .container
-            .info__title.title Ostavi svoju prognozu i ostvari šansu osvojiti dio nagradnog fonda do
+            .info__title.title(data-translate="infoTitle") Ostavi svoju prognozu i ostvari šansu osvojiti dio nagradnog fonda do
             .info__sum
                 picture
                     source(media="(min-width: 1001px)" srcset="./img/sum-desk.png")
@@ -25,11 +25,11 @@
                     source(media="(min-width: 701px) and (max-width: 1000px)" srcset="./img/sum-tab.png")
                     source(media="(max-width: 700px)" srcset="./img/sum-mob.png")
                     img(src="./img/sum-desk.png", alt="FAVBET")
-            .info__sub Točna prognoza rezultata donosi nagradu
-            .info__txt Od 24. svibnja do 01. lipnja 2024. sudjeluj u promociji «Nokaut runda». Ostavi točnu prognozu konačnog rezultata meča «Filip Hrgović - Daniel Dubois», izvrši okladu od 5 EUR te ostvari priliku osvojiti dio nagradnog fonda do 3000 EUR.
+            .info__sub(data-translate="infoSub") Točna prognoza rezultata donosi nagradu
+            .info__txt(data-translate="infoTxt") Od 24. svibnja do 01. lipnja 2024. sudjeluj u promociji «Nokaut runda». Ostavi točnu prognozu konačnog rezultata meča «Filip Hrgović - Daniel Dubois», izvrši okladu od 5 EUR te ostvari priliku osvojiti dio nagradnog fonda do 3000 EUR.
     .step
         .container
-            .step__title.title Kako sudjelovati?
+            .step__title.title(data-translate="stepTitle") Kako sudjelovati?
             .step__list
                 .step__item
                     .step__item-num
@@ -39,7 +39,7 @@
                             source(media="(min-width: 701px) and (max-width: 1000px)" srcset="./img/num-1.png")
                             source(media="(max-width: 700px)" srcset="./img/num-1-mob.png")
                             img(src="./img/num-1.png", alt="FAVBET")
-                    .step__item-descr Pogodi odlučujuću rundu meča
+                    .step__item-descr(data-translate="step-1") Pogodi odlučujuću rundu meča
                 .step__item
                     .step__item-num
                         picture
@@ -48,7 +48,7 @@
                             source(media="(min-width: 701px) and (max-width: 1000px)" srcset="./img/num-2.png")
                             source(media="(max-width: 700px)" srcset="./img/num-2-mob.png")
                             img(src="./img/num-2.png", alt="FAVBET")
-                    .step__item-descr Klikni na gumb «Ostavi prognozu»
+                    .step__item-descr(data-translate="step-2") Klikni na gumb «Ostavi prognozu»
                 .step__item
                     .step__item-num
                         picture
@@ -57,22 +57,21 @@
                             source(media="(min-width: 701px) and (max-width: 1000px)" srcset="./img/num-3.png")
                             source(media="(max-width: 700px)" srcset="./img/num-3-mob.png")
                             img(src="./img/num-3.png", alt="FAVBET")
-                    .step__item-descr Odigraj listić <br> od 10 EUR
+                    .step__item-descr(data-translate="step-3") Odigraj listić <br> od 10 EUR
         .step__details.drop
             details.dropdown
-                summary Detaljі
+                summary(data-translate="stepDetails") Detaljі
                 .drop-txt
-                    .drop-txt-list
+                    .drop-txt-list(data-translate="stepDetailsList")
                         strong 1.Pogodi odlučujuću rundu meča
                         p Ostavi točnu prognozu na stranici promocije na način da odabereš jednog od boksača i odlučujuću rundu meča ili O/S.
                         strong 2. Klikni na gumb “Ostavi prognozu”
                         p Poslije unošenja točnog rezultata klikni na gumb “Ostavi prognozu”. U promociji će se uzeti u obzir samo posljednja prognoza koju je Sudionik ostavio prije početka meča.
                         strong 3. Odigraj listić od 10 EUR
                         p Od 18. prosinca u 10:00:00 do 23. prosinca u 19:59:59 odigraj listić od 10 EUR (75.35HRK) na meč “Filip Hrgović - Mark De Mori”, navodeći točan konačni rezultat te ostvari šansu za osvojiti dio nagradnog fonda od 3 000 EUR (22,603.50 HRK).
-
     .prediction
         .container
-            .prediction__title.title Ostavi prognozu
+            .prediction__title.title(data-translate="predictionTitle") Ostavi prognozu
             .prediction__wrapp
                 .prediction__team.player1
                     picture.prediction__team-img
@@ -98,28 +97,28 @@
                         img(src="./img/boxer2_name-desk.png", alt="FAVBET")
             a(href="/login/" role="button" data-translate="login").prediction__btn.btn.unauth-msg Prijavi se
             .prediction__last
-                .prediction__last-txt Tvoja posljednja prognoza:
+                .prediction__last-txt(data-translate="lastPrediction") Tvoja posljednja prognoza:
                 .prediction__last-wrapp
                     .prediction__last-team
-                        .prediction__last-boxer1 Hrgović
-                        .prediction__last-score 12/0
-                        .prediction__last-boxer2 mark de mori
+                        .prediction__last-boxer1(data-translate="boxer-1") Hrgović
+                        .prediction__last-score(data-translate="lastScore") 12/0
+                        .prediction__last-boxer2(data-translate="boxer-2") mark de mori
                     .prediction__bet
                         .prediction__bet-true
-                            span OKLADA ODIGRAN
+                            span(data-translate="betTrue") OKLADA ODIGRAN
                         .prediction__bet-false
-                            span OKLADA NEODIGRANA
+                            span(data-translate="betFalse") OKLADA NEODIGRANA
     .wrapp
         .wrapp__bg
         .tableResults
             .container
-                .tableResults__title.title Sudionici
+                .tableResults__title.title(data-translate="tableTitle") Sudionici
                 .tableResults__wrapp
                     .tableResults__head
-                        .tableResults__head-col ID Sudionika
-                        .tableResults__head-col Datum i vrijeme
-                        .tableResults__head-col Prognoza
-                        .tableResults__head-col Nagrada*
+                        .tableResults__head-col(data-translate="tableHeadID") ID Sudionika
+                        .tableResults__head-col(data-translate="tableHeadDate") Datum i vrijeme
+                        .tableResults__head-col(data-translate="tableHeadPrediction") Prognoza
+                        .tableResults__head-col(data-translate="tableHeadPrizes") Nagrada*
                     .tableResults__body
                         .tableResults__row
                             .tableResults__body-col ******67
@@ -174,13 +173,13 @@
                             .tableResults__body-col 2:0
                             .tableResults__body-col *********
 
-                .tableResults__txt * iznos osvojene nagrade prikazan u eurima bit će poznat po završetku meča te dodan u tablicu u roku najkasnije sljedeća 2 radna dana (15.08.2023.). Nagradni fond će biti raspodijeljen među sudionicima koji su ostavili točnu prognozu odlučujuće runde te izvršili potvrdu oklade čiji su uvjeti navedeni u Službenim pravilima sudjelovanja u Promociji “Boksački stručnjak” u točkama 4.1. i 4.2.
+                .tableResults__txt(data-translate="tableTxt") * iznos osvojene nagrade prikazan u eurima bit će poznat po završetku meča te dodan u tablicu u roku najkasnije sljedeća 2 radna dana (15.08.2023.). Nagradni fond će biti raspodijeljen među sudionicima koji su ostavili točnu prognozu odlučujuće runde te izvršili potvrdu oklade čiji su uvjeti navedeni u Službenim pravilima sudjelovanja u Promociji “Boksački stručnjak” u točkama 4.1. i 4.2.
                 a(href="/sports/event/boxing/40127260/" target="_blank" role="button").tableResults__btn.btn Prijavi se
     .rules.drop
         details.dropdown
-            summary Službena pravila sudjelovanja u promociji  «Boksački stručnjak»
+            summary(data-translate="terms") Službena pravila sudjelovanja u promociji  «Boksački stručnjak»
             .drop-txt
-                .drop-txt-list
+                .drop-txt-list(data-translate="termsList")
                     strong 1) Organizator Promocije
                     p 1.1. Organiziranje і provođenje Promocije regulirani su ovim pravilima (dalje u tekstu: Pravila), koja su službeno objavljena na web stranici www.favbet.hr
                     strong 2) Cilj provođenja Promocije – popularizacija brenda Priređivača igara na sreću
@@ -205,5 +204,3 @@
                     p 4.3. Tijekom trajanja Promocije, automatsko ažuriranje navedenih prognoza Sudionika u tablici vršit će se svakih 10 minuta za svakog Sudionika, ovisno o ispunjavanju uvjeta navedenih u ovim Pravilima.
                     p 4.4. Poslije obračuna dobitaka Dobitnika, na njihov osobni račun će biti poslana poruka o dobicima u Promociji.
                     p 4.5. Dobitnik Promocije ima pravo izvršiti oklade u omjeru х1 iznosa dobitka u odjeljcima Sport, LIVE ili Casino unutar web stranice favbet.hr te preuzeti osvojene nagrade na svom osobnom računu u odjeljku “Bonusi” u roku od 5 kalendarskih dana od trenutka osvajanja. Ako sudionik nije izvršio okladu u ispravnom iznosu i/ili nije preuzeo osvojenu nagradu u navedenom roku, gubi pravo dobivanja nagrade.
-
-
