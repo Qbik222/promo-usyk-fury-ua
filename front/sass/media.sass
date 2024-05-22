@@ -742,12 +742,14 @@
   .fav__page
     .info
       padding: 30px 0
-    .step
-      .container
-        max-width: 400px
     .tableResults
       &::before
         top: -6.7vw
     .wrapp
       &::before, &::after
         height: 300px
+
+@media screen and (max-width: 700px) and (max-height: 450px) and (orientation: landscape)
+  .step
+    .container
+      max-width: 400px
