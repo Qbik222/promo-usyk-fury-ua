@@ -166,12 +166,17 @@
         margin: 60px auto 0
         transform: none
   .prediction
-    padding-top: 65px
+    padding: 65px 0 100px 0
     &__title
       font-size: 38px
       line-height: 60px
     &__bet
-      display: none
+      position: absolute
+      bottom: -80px
+      left: 50%
+      margin: 0
+      transform: translate(-50%, 0)
+      width: 100%
     &__wrapp
       margin: 170px auto 55px
       max-width: 650px
@@ -487,6 +492,8 @@
           min-height: 260px
           width: 260px
           top: -90px
+      &__bet
+        bottom: -60px
       &__team
         display: flex
         flex-direction: column
