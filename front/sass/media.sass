@@ -18,6 +18,13 @@
         top: -23%
 
 @media screen and (max-width: 1800px)
+  .fav__page
+    .left-decor
+      &::before
+       width: 38%
+    .right-decor
+      &::before
+        width: 60%
   .info
     padding: 0 0 75px
     .container
@@ -31,11 +38,6 @@
         height: 430px
         top: 7%
         right: -140px
-    &__sum
-      margin: 43px 0
-      padding: 12px 55px 7px
-      font-size: 51px
-      line-height: 67px
     &__sub
       font-size: 38px
     &__txt
@@ -46,26 +48,30 @@
         top: 4%
         width: 1895px
         height: 530px
-    &__list
-      margin-top: 30px
   .tableResults
     &__wrapp
       margin: 35px auto 50px
     &__txt
       margin-bottom: 35px
 
-@media screen and (max-width: 1400px)
+@media screen and (max-width: 1550px)
   .info
+    padding-bottom: 0
+  .step
+    &__list
+      margin: 145px auto 0
+    &__title
+      margin: -20px 0 190px 0
     .container
-      &:before
-        width: 505px
-        height: 315px
-        top: 20%
-      &:after
-        width: 512px
-        height: 370px
-        top: 7%
-        right: -183px
+      transform: scale(.75)
+
+@media screen and (max-width: 1440px)
+  .fav__page
+    .right-decor
+      &::before
+        width: 62%
+  .info
+    //.container
     &__title,.title
       max-width: 900px
       font-size: 41px
@@ -73,77 +79,137 @@
   .step__list
     max-width: 940px
 
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 1300px)
+  .fav__page
+    .right-decor
+      width: 22vw
+      height: 79vw
+    .left-decor
+      width: 22vw
+      height: 79vw
+      &::before
+        width: 35%
+
+@media screen and (max-width: 1220px)
+  .prediction
+    &__wrapp
+      transform: scale(.82)
+
+
+@media screen and (max-width: 1024px)
+ .fav__page
+  .left-decor, .right-decor
+    &::before, &::after
+      width: 100%
+  .banner
+    margin: 0 0 50px 0
+    &__text
+      bottom: -10px
   .info
-    padding-bottom: 50px
-    .container
-      &:after
-        width: 293px
-        height: 250px
-        top: 35%
-        right: -100px
-      &:before
-        width: 378px
-        height: 235px
-        top: 23%
-    &__title,.title
-      max-width: 708px
-      font-size: 38px
-      line-height: 60px
-    &__sum
-      margin: 20px 0 50px
-      font-size: 35px
-      line-height: 55px
-    &__sub
+    &__title, &__sub
       font-size: 28px
-      line-height: 38px
+      line-height: 44px
+    &__sub
+      max-width: 420px
+      margin: 0 auto
     &__txt
-      max-width: 652px
       font-size: 14px
-      line-height: 25px
+      line-height: 26px
+      max-width: 655px
+    &__sum
+      max-width: 460px
+
   .step
+    &__title
+      font-size: 32px
+      line-height: 60px
+      margin: 50px 0 0 0
     .container
-      &:before
-        width: 1172px
-        height: 315px
-        top: 18%
-        left: 0
+      transform: scale(1)
     &__list
-      max-width: 708px
-      margin: 35px auto 50px
+      min-width: auto
+      margin: 145px 0 40px 0
     &__item
-      padding: 60px 5px 28px
-      width: 208px
-      &-num
-        font-size: 60px
-        line-height: 50px
-        &:before
-          top: -50px
-          width: 131px
-          height: 148px
-      &-descr
-        margin-top: 35px
+      &:nth-child(1)
+        max-width: 170px
+        .step__item-descr
+          max-width: 170px
+        .step__item-num::before
+          top: -95px
+          left: -125px
+      &:nth-child(2)
         max-width: 190px
-        font-size: 14px
-        line-height: 20px
+        .step__item-descr
+          max-width: 190px
+        .step__item-num::before
+          top: -95px
+          left: -110px
+      &:nth-child(3)
+        max-width: 170px
+        .step__item-descr
+          max-width: 170px
+        .step__item-num::before
+          top: -96px
+          right: -112px
+      &-num
+        max-width: 75px
+        margin: 0 auto
+        &::before
+          width: 300px
+          height: 230px
+      &:first-child
+        .step__item-num
+          max-width: 58px
+      &-descr
+        font-size: 16px
+        line-height: 24px
+        margin: 60px auto 0
+        transform: none
   .prediction
     padding-top: 65px
+    &__title
+      font-size: 38px
+      line-height: 60px
+    &__bet
+      display: none
     &__wrapp
       margin: 170px auto 55px
       max-width: 650px
       align-items: flex-end
+      transform: scale(1)
     &__team
+      width: 274px
+      &-btn
+        &-plus
+          right: -5px
+        &-minus
+          left: -5px
+
       &-name
-        margin-top: 3px
+         bottom: -25px
+      &:first-child
+        .prediction__team-name
+          left: -50px
+          bottom: -25px
+          max-width: 200px
+      &:last-child
+        .prediction__team-name
+          left: auto
+          right: -65px
+          bottom: -25px
+          max-width: 200px
     &__flex
       position: absolute
       top: -90px
       left: 0
       right: 0
       margin: auto
-      width: 273px
+      min-width: 270px
+      max-width: 270px
       &:before
         height: 278px
+        top: -88px
+        left: 6px
     &__score
       font-size: 80px
     &__last
@@ -152,10 +218,46 @@
       justify-content: center
       &-wrapp
         margin-top: 0
-        margin-left: 13px
+        margin-left: 25px
     &__yourBet
       font-size: 14px
+  .wrapp
+    &::before, &::after
+      //content: ""
+      //display: block
+      position: absolute
+      width: 100%
+      height: 300px
+      opacity: 1
+    &::before
+      top: 64vw
+      left: 0
+      background: url("../img/table-decor-tab-bottom.png") no-repeat 0 170%/cover
+    &::after
+      top: -14vw
+      left: 0
+      background: url("../img/table-decor-tab-top.png")  no-repeat 0 0/cover
   .tableResults
+    &__title
+      font-size: 38px
+      line-height: 60px
+    .container
+      z-index: 3
+    &::before, &::after
+      display: block
+      position: absolute
+      width: 100%
+      height: 200px
+      left: 0
+      z-index: 1
+    &::before
+      top: -50px
+      background: linear-gradient(0deg, rgba(1, 1, 62, 0.00) 0%, $blue 100%)
+    &::after
+      top: auto
+      bottom: -37px
+      background: linear-gradient(180deg, rgba(1, 1, 62, 0.00) 0%, $blue 100%)
+      height: 300px
     &__wrapp
       margin: 20px auto 35px
       max-width: 708px
@@ -185,312 +287,467 @@
     padding: 40px 0
   .container
     max-width: 708px
-  .title
-    font-size: 38px
-    line-height: 45px
+
   .drop
     max-width: 708px
     .dropdown
       summary
         padding-left: 24px
+        font-size: 16px
+        line-height: 24px
+        border-radius: 8px
         &:after
           width: 23px
           height: 23px
           top: 39%
       .drop-txt
         padding-right: 28px
+        border-radius: 8px
+
   .btn
     min-width: 306px
     padding: 22px 10px 18px
 
+@media screen and (max-width: 920px)
+  .fav__page
+    .tableResults
+      &::after
+        bottom: 0
+
+@media screen and (max-width: 850px)
+  .fav__page
+    .tableResults
+      &::after
+        bottom: 25px
+
+@media screen and (max-width: 768px)
+  .fav__page
+    .tableResults
+      &::after
+        bottom: 15px
+    .wrapp
+      &::before
+        top: 69vw
+
 @media screen and (max-width: 750px)
-  .container,.drop
-    padding: 0 18px
-  .rules
-    padding: 40px 18px
+  .fav__page
+    .container,.drop
+      padding: 0 18px
+    .rules
+      padding: 40px 18px
 
 @media screen and (max-width: 700px)
-  .info
-    .container
-      &:after
-        width: 175px
-        height: 183px
-        top: 33%
-        right: -62px
-      &:before
-        width: 200px
-        height: 125px
-        top: 25%
+  .fav__page
+    .right-decor
+      display: block
+      background: url("../img/right-decor-mob.png") no-repeat 0 0/contain
+      width: 140px
+      height: 485px
+      top: 550px
+      &::before
+        width: 100%
+    .left-decor
+      display: block
+      top: 550px
+      background: url("../img/left-decor-mob.png") no-repeat 0 0/contain
+      width: 200px
+      height: 590px
+      &::before
+        content: none
+    .banner
+      &::before
+        height: 20%
+      &__text
+        width: 100%
+        bottom: 0
+    .info
+      .container
+        max-width: 340px
+        padding: 0 10px
+        &:after
+          width: 175px
+          height: 183px
+          top: 33%
+          right: -62px
+        &:before
+          width: 200px
+          height: 125px
+          top: 25%
+          left: -30px
+      &__title,.title
+        max-width: 100%
+        font-size: 20px
+        line-height: 28px
+      &__sum
+        margin: 25px auto 0 auto
+        max-width: 300px
+      &__sub
+        font-size: 20px
+        line-height: 28px
+        margin-top: 15px
+      &__txt
+        margin-top: 15px
+
+    .step
+      //.container
+      //  padding: 0
+      &__list
+        margin: 65px 0 0
+        flex-direction: column
+        z-index: 1
+      &__item
+        //padding: 11px 20px 8px 53px
+        width: 100%
+        min-height: 210px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3)
+          max-width: 100%
+          .step__item-descr
+            max-width: 144px
+        &:nth-child(2), &:nth-child(3)
+          .step__item-num
+            max-width: 85px
+        &:nth-child(1)
+          .step__item-num
+            max-width: 65px
+            &::before
+              left: -85px
+              background: url("../img/light-left-mob.png") no-repeat 0 0/contain
+
+        &:nth-child(2)
+          flex-direction: row-reverse
+          .step__item-num
+            &::before
+              background: url("../img/light-right-mob.png") no-repeat 0 0/contain
+
+        &:nth-child(3)
+          .step__item-num
+            &::before
+              right: auto
+              left: -65px
+              background: url("../img/light-left-mob.png") no-repeat 0 0/contain
+
+        &:nth-of-type(2)
+          margin: 30px 0
+          padding-left: 10px
+        &-num
+          font-size: 40px
+          &:before
+            width: 300px
+            height: 205px
+        &-descr
+          font-size: 16px
+          line-height: 20px
+          text-align: left
+          z-index: 3
+          margin: 0 0 40px 0
+      &__lightning1,&__lightning2,&__lightning3
+        display: block
+        position: absolute
+      &__lightning1
+        background: url("https://fav-prom.com/html/predictor-fight-hr/img/lightning1_step_mob.png") no-repeat 0 0/contain
+        width: 182px
+        height: 182px
+        top: 55px
         left: -30px
-    &__title,.title
-      max-width: 100%
+      &__lightning2
+        background: url("https://fav-prom.com/html/predictor-fight-hr/img/lightning2_step_mob.png") no-repeat 0 0/contain
+        width: 310px
+        height: 113px
+        top: 0
+        right: -115px
+      &__lightning3
+        background: url("https://fav-prom.com/html/predictor-fight-hr/img/lightning3_step_mob.png") no-repeat 0 0/contain
+        width: 235px
+        height: 250px
+        right: -115px
+        bottom: -137px
+    .prediction
+      padding: 60px 0
+      .container
+        padding: 0
+      &__wrapp
+        //max-width: 310px
+        justify-content: space-between
+        margin: 240px 0 55px 0
+      &__score
+        font-size: 60px
+      //&__title
+      &__flex
+        min-width: 260px
+        max-width: 260px
+        top: -150px
+        //margin-bottom: 50px
+        &:before
+          height: 260px
+          min-height: 260px
+          width: 260px
+          top: -90px
+      &__team
+        display: flex
+        flex-direction: column
+        align-items: center
+        &:first-child
+          margin-left: -10px
+          .prediction__team-name
+            max-width: 150px
+            left: 5px
+
+        &:last-child
+          margin-right: -10px
+          .prediction__team-name
+            max-width: 150px
+            right: 5px
+
+        &-wrapp
+          margin: 160px auto 40px
+          max-width: 340px
+        &-img
+          width: 190px
+        &-name
+          max-width: 150px
+        &-btn
+          &-plus
+            right: -10px
+          &-minus
+            left: -10px
+      &__last
+        margin-top: 40px
+        flex-direction: column
+        &-wrapp
+          margin-left: 0
+          margin-top: 17px
+        &-team
+          margin-right: 0
+      &__bet
+        margin-top: 20px
+        &-true,&-false
+          font-size: 14px
+          padding: 4px 14px 2px
+    .wrapp
+      &::after
+        content: ""
+        display: block
+        width: 100%
+        position: absolute
+        top: auto
+        bottom: 40px
+        height: 200px
+        transform: translate(0, -20%)
+        background: url("../img/table-decor-tab-bottom.png") no-repeat 0 0/contain
+      &::before
+        content: ""
+        display: block
+        width: 100%
+        position: absolute
+        top: 0
+        height: 200px
+        transform: translate(0, -20%)
+        background: url("../img/table-decor-tab-top.png") no-repeat 0 0/contain
+
+    .tableResults
+      //&::before, &::after
+      //  content: none
+      &::after
+        bottom: 0
+        background: linear-gradient(180deg, rgba(1, 1, 62, 0) 0%, $blue 100%)
+        transform: translate(0, -20%)
+      &::before
+        top: 0
+        background: linear-gradient(0deg, rgba(1, 1, 62, 0) 0%, $blue 100%)
+        transform: translate(0, -20%)
+      .container
+        padding: 0
+      &__wrapp
+        margin: 25px 0 35px
+        border-radius: 0
+        //&::before
+        //  content: ""
+        //  display: block
+        //  width: 100%
+        //  position: absolute
+        //  top: 0
+        //  height: 150px
+        //  background: url("../img/table-decor-tab-top.png") no-repeat 0 0/contain
+      &__head
+        padding: 14px 5px 13px 18px
+        &-col
+          font-size: 10px
+          line-height: 14px
+          padding-right: 3px
+          &:nth-of-type(1)
+            width: 23%
+          &:nth-of-type(2)
+            width: 26%
+          &:nth-of-type(3)
+            width: 32%
+          &:nth-of-type(4)
+            width: 19%
+      &__body
+        margin-right: 5px
+        max-height: 640px
+        padding: 0 5px 0 18px
+        font-size: 13px
+        line-height: 16px
+        border-bottom-width: 23px
+        border-left: none
+        border-right: none
+        &-col
+          padding-right: 3px
+          span
+            font-size: 10px
+            padding-left: 0
+          &:nth-of-type(2)
+            width: 26%
+          &:nth-of-type(3)
+            width: 34%
+      &__txt
+        margin-bottom: 50px
+        font-size: 9px
+        line-height: 16px
+        padding: 0 18px
+
+    .drop
+      .dropdown
+        summary
+          padding: 12px 35px 11px 16px
+          border-radius: 8px
+          &:after
+            width: 14px
+            height: 14px
+            right: 16px
+        .drop-txt
+          margin-top: 2px
+          padding: 20px 14px 15px 18px
+          font-size: 12px
+          line-height: 20px
+          border-radius: 8px
+          strong
+            font-size: 14px
+          .retreat1
+            padding-left: 10px
+          .retreat2
+            padding-left: 15px
+          .circle
+            padding-left: 15px
+    .rules
+      .dropdown
+        summary
+          font-size: 14px
+          line-height: 22px
+        .drop-txt-list
+          max-height: 300px
+    .title
       font-size: 28px
       line-height: 36px
-    &__sum
-      margin: 35px 0
-      padding: 12px 25px 7px
-      font-size: 21px
-      line-height: 39px
-    &__sub
-      font-size: 21px
-      line-height: 25px
-
-  .step
-    &__list
-      margin: 25px 0 45px
-      flex-direction: column
-      z-index: 1
-    &__item
-      padding: 11px 20px 8px 53px
-      width: 100%
-      display: flex
-      align-items: center
-      justify-content: space-between
-      &:nth-of-type(2)
-        margin: 30px 0
-      &-num
-        font-size: 40px
-        &:before
-          width: 83px
-          height: 94px
-          top: -25px
-          left: -30px
-      &-descr
-        max-width: 200px
-        font-size: 16px
-        line-height: 20px
-        text-align: end
-        margin: 0
-    &__lightning1,&__lightning2,&__lightning3
-      display: block
-      position: absolute
-    &__lightning1
-      background: url("https://fav-prom.com/html/predictor-fight-hr/img/lightning1_step_mob.png") no-repeat 0 0/contain
-      width: 182px
-      height: 182px
-      top: 55px
-      left: -30px
-    &__lightning2
-      background: url("https://fav-prom.com/html/predictor-fight-hr/img/lightning2_step_mob.png") no-repeat 0 0/contain
-      width: 310px
-      height: 113px
-      top: 0
-      right: -115px
-    &__lightning3
-      background: url("https://fav-prom.com/html/predictor-fight-hr/img/lightning3_step_mob.png") no-repeat 0 0/contain
-      width: 235px
-      height: 250px
-      right: -115px
-      bottom: -137px
-  .prediction
-    padding: 60px 0
-    &__wrapp
-      max-width: 310px
-      justify-content: center
-      margin-bottom: 90px
-    &__score
-      font-size: 60px
-    &__flex
-      width: 230px
+    .btn
+      min-width: 340px
+      font-size: 18px
+      padding: 17px 10px 14px
       &:before
-        height: 230px
-        top: -70px
-    &__team
-      display: flex
-      flex-direction: column
-      align-items: center
-      &:first-child
-        margin-right: 20px
-      &:last-child
-        margin-bottom: -38px
-        .prediction__team-name
-          max-width: 200px
-      &-wrapp
-        margin: 160px auto 40px
-        max-width: 340px
-      &-img
-        width: 160px
-      &-name
-        font-size: 28px
-        margin-top: 20px
-      &-btn
-        &-plus
-          right: -10px
-        &-minus
-          left: -10px
-    &__last
-      margin-top: 40px
-      flex-direction: column
-      &-wrapp
-        margin-left: 0
-        margin-top: 17px
-    &__bet
-      margin-top: 20px
-      &-true,&-false
-        font-size: 14px
-        padding: 4px 14px 2px
-
-  .tableResults
-    .container
-      padding: 0
-    &__wrapp
-      margin: 25px 0 35px
-      border-radius: 0
-    &__head
-      padding: 14px 5px 13px 18px
-      &-col
-        font-size: 10px
-        line-height: 14px
-        padding-right: 3px
-        &:nth-of-type(1)
-          width: 23%
-        &:nth-of-type(2)
-          width: 26%
-        &:nth-of-type(3)
-          width: 32%
-        &:nth-of-type(4)
-          width: 19%
-    &__body
-      margin-right: 5px
-      max-height: 640px
-      padding: 0 5px 0 18px
-      font-size: 13px
-      line-height: 16px
-      border-bottom-width: 23px
-      border-left: none
-      border-right: none
-      &-col
-        padding-right: 3px
-        span
-          font-size: 10px
-          padding-left: 0
-        &:nth-of-type(2)
-          width: 26%
-        &:nth-of-type(3)
-          width: 34%
-    &__txt
-      margin-bottom: 50px
-      font-size: 9px
-      line-height: 16px
-      padding: 0 18px
-
-  .drop
-    .dropdown
-      summary
-        padding: 12px 35px 11px 16px
-        border-radius: 8px
-        &:after
-          width: 14px
-          height: 14px
-          right: 16px
-      .drop-txt
-        margin-top: 2px
-        padding: 20px 14px 15px 18px
-        font-size: 12px
-        line-height: 20px
-        border-radius: 8px
-        strong
-          font-size: 14px
-        .retreat1
-          padding-left: 10px
-        .retreat2
-          padding-left: 15px
-        .circle
-          padding-left: 15px
-  .rules
-    .dropdown
-      summary
-        font-size: 14px
-        line-height: 22px
-      .drop-txt-list
-        max-height: 300px
-  .title
-    font-size: 28px
-    line-height: 36px
-  .btn
-    min-width: 340px
-    font-size: 18px
-    padding: 17px 10px 14px
-    &:before
-      left: 0
-      right: 0
-      top: -30px
-      font-size: 16px
-  @keyframes betScale
-    0%
-      transform: scale(1)
-    50%
-      transform: scale(1.05)
-    100%
-      transform: scale(1)
+        left: 0
+        right: 0
+        top: -30px
+        font-size: 16px
+    @keyframes betScale
+      0%
+        transform: scale(1)
+      50%
+        transform: scale(1.05)
+      100%
+        transform: scale(1)
 
 @media screen and (max-width: 374px)
-  .info
-    padding-bottom: 30px
-    &__title,.title
-      font-size: 20px
-      line-height: 29px
-    &__sum
-      margin: 25px 0
-      padding: 9px 21px 5px
-      font-size: 18px
-      line-height: 32px
-    &__txt
-      font-size: 11px
-      line-height: 22px
-  .step
-    &__item
-      padding-left: 40px
-      &-descr
-        max-width: 145px
+  .fav__page
+    .info
+      padding-bottom: 30px
+      &__title,.title
+        font-size: 20px
+        line-height: 29px
+      &__sum
+        margin: 25px 0
+        padding: 9px 21px 5px
+        font-size: 18px
+        line-height: 32px
+      &__txt
         font-size: 11px
-        line-height: 18px
-  .prediction
-    padding: 40px 0
-    &__wrapp
-      max-width: 320px
-    &__team
-      &:last-child
-        margin-bottom: -27px
-        .prediction__team-name
-           max-width: 110px
-      &-img
-        width: 124px
-      &-name
-        margin-top: 10px
-        font-size: 24px
-        line-height: 26px
-    &__last
-      margin-top: 20px
-      font-size: 14px
-      &-wrapp
-        margin-top: 10px
-    &__bet
-      &-true,&-false
-        padding: 6px 11px 4px
-        font-size: 12px
-        line-height: 18px
-    &__yourBet
-      font-size: 10px
-  .tableResults
-    &__head
-      padding-left: 7px
-    &__body
-      padding-left: 7px
-    &__row
-      font-size: 11px
-      line-height: 14px
-  .drop
-    .dropdown
-      summary
+        line-height: 22px
+    .step
+      //&__item
+      //  padding-left: 40px
+        //&-descr
+        //  max-width: 145px
+        //  font-size: 11px
+        //  line-height: 18px
+    .prediction
+      padding: 40px 0
+      &__wrapp
+        margin: 240px auto 55px auto
+        max-width: 320px
+      &__team
+        width: 164px
+        &-img
+          max-width: 164px
+        &:last-child
+          .prediction__team-name
+            //right: -10px
+            max-width: 120px
+        &:first-child
+          .prediction__team-name
+            //left: -10px
+            max-width: 120px
+
+        &-img
+          width: 164px
+        &-name
+          margin-top: 10px
+          font-size: 24px
+          line-height: 26px
+      &__last
+        margin-top: 20px
+        font-size: 14px
+        &-wrapp
+          margin-top: 10px
+      &__bet
+        &-true,&-false
+          padding: 6px 11px 4px
+          font-size: 12px
+          line-height: 18px
+      &__yourBet
+        font-size: 10px
+    .tableResults
+      &__head
+        padding-left: 7px
+      &__body
+        padding-left: 7px
+      &__row
         font-size: 11px
-        line-height: 19px
-  .btn
-    min-width: 270px
-  .title
-    font-size: 22px
-    line-height: 30px
+        line-height: 14px
+    .drop
+      .dropdown
+        summary
+          font-size: 11px
+          line-height: 19px
+    .btn
+      min-width: 270px
+    .title
+      font-size: 22px
+      line-height: 30px
 
 @media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
-  .info
-    padding: 30px 0
+  .fav__page
+    .info
+      padding: 30px 0
+    .step
+      .container
+        max-width: 400px
+    .tableResults
+      &::before
+        top: -6.7vw
+    .wrapp
+      &::before, &::after
+        height: 300px
