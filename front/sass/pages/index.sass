@@ -31,6 +31,7 @@ $font-josefin-bold: JosefinSans-Bold, sans-serif
   right: 0
 
 body.dark
+  background: $black_2
   .fav__page
     background: $black_2
     .right-decor, .left-decor
@@ -112,7 +113,8 @@ body.dark
 
 
 
-
+body
+  background: $blue
 
 .fav__page
   overflow: hidden
@@ -466,10 +468,6 @@ body.dark
   margin: 50px 0 0 0
   @media screen and (min-width: 1025px)
     background: url("../img/bg-result-desk.jpg") no-repeat 0 0/contain
-  //@media screen and (min-width: 701px) and (max-width: 1000px)
-  //  background: url("../img/bg_tab.png") no-repeat 0 50%/cover
-  //@media screen and (max-width: 700px)
-  //  background: url("../img/bg_mob.png") no-repeat 0 50%/cover
   position: relative
   &::before
     position: absolute
@@ -734,60 +732,49 @@ body.dark
 .pointer-none
   pointer-events: none
 
-.disableBtn
-  pointer-events: none
-  background: $gray
-  &:before,&:after
-    background: $blue_2
-
-.block-btn
-  pointer-events: none
-  background: $gray_2
-  color: $blue
-
 .takeUser
   .prediction__team-name
     color: $magenta
 
-.showBtn
-  animation: showBtn 5s ease-in-out
+//.showBtn
+//  animation: showBtn 5s ease-in-out
 
-.betScale
-  span
-    animation: betScale 3s ease-in-out infinite
+//.betScale
+//  span
+//    animation: betScale 3s ease-in-out infinite
+//
+//.boxerScale
+//  animation: boxerScale 0.4s ease forwards
 
-.boxerScale
-  animation: boxerScale 0.4s ease forwards
+//@keyframes showBtn
+//  from
+//    opacity: 0
+//    pointer-events: none
+//  to
+//    opacity: 1
+//    pointer-events: auto
 
-@keyframes showBtn
-  from
-    opacity: 0
-    pointer-events: none
-  to
-    opacity: 1
-    pointer-events: auto
+//@keyframes betScale
+//  0%
+//    transform: scale(1)
+//  50%
+//    transform: scale(1.1)
+//  100%
+//    transform: scale(1)
 
-@keyframes betScale
-  0%
-    transform: scale(1)
-  50%
-    transform: scale(1.1)
-  100%
-    transform: scale(1)
+//@keyframes boxerScale
+//  from
+//    transform: scale(1)
+//  to
+//    transform: scale(1.05)
 
-@keyframes boxerScale
-  from
-    transform: scale(1)
-  to
-    transform: scale(1.05)
-
-@keyframes bg-anim-one
-  0%
-    transform: translateX(-10px) scale(1)
-  50%
-    transform: translateX(10px) scale(1.02)
-  100%
-    transform: translateX(-10px) scale(1)
+//@keyframes bg-anim-one
+//  0%
+//    transform: translateX(-10px) scale(1)
+//  50%
+//    transform: translateX(10px) scale(1.02)
+//  100%
+//    transform: translateX(-10px) scale(1)
 
 @keyframes dropShadow
   0%
@@ -812,3 +799,35 @@ body.dark
     transform: scale(1.05)
   100%
     transform: scale(1)
+
+.step
+  &__item
+    &:nth-child(1)
+      .step__item-num
+        img
+          animation: scaleSteps 1.2s ease-in-out infinite 1.2s
+    &:nth-child(2)
+      .step__item-num
+        img
+          animation: scaleSteps 1.2s ease-in-out infinite 2.6s
+
+    &:nth-child(3)
+      .step__item-num
+        img
+          animation: scaleSteps 1.2s ease-in-out infinite 3.8s
+
+
+@keyframes sumAnimation
+  0%, 100%
+    transform: rotate(0deg) scale(1)
+  25%
+    transform: rotate(2deg) scale(1.01)
+  50%
+    transform: rotate(-2deg) scale(1.01)
+  75%
+    transform: rotate(0deg) scale(1.01)
+
+.info__sum
+  animation: sumAnimation 2.5s ease-in-out infinite
+
+
