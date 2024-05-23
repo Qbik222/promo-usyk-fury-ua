@@ -66,15 +66,18 @@
       margin-bottom: 35px
 
 @media screen and (max-width: 1550px)
-  .info
-    padding-bottom: 0
-  .step
-    &__list
-      margin: 145px auto 0
-    &__title
-      margin: -20px 0 190px 0
-    .container
-      transform: scale(.75)
+  .fav__page
+    .right-decor
+      top: 350px
+    .info
+      padding-bottom: 0
+    .step
+      &__list
+        margin: 145px auto 0
+      &__title
+        margin: -20px 0 190px 0
+      .container
+        transform: scale(.75)
 
 @media screen and (max-width: 1440px)
   .fav__page
@@ -239,8 +242,6 @@
       font-size: 14px
   .wrapp
     &::before, &::after
-      //content: ""
-      //display: block
       position: absolute
       width: 100%
       height: 300px
@@ -771,3 +772,36 @@
   .step
     .container
       max-width: 400px
+
+/************************FOLD
+
+@media screen and (max-width: 700px) and (min-width: 640px) and (max-height: 700px) and (min-height: 640px) and (orientation: landscape)
+  .fav__page
+    .tableResults
+      &::before
+        top: -10px
+      &::after
+        bottom: -25px
+    .wrapp
+      &::before
+        height: 280px
+        top: -50px
+      &::after
+        height: 280px
+        bottom: -40px
+
+
+@media screen and (max-width: 700px) and (min-width: 640px) and (max-height: 700px) and (min-height: 640px) and (orientation: portrait)
+  .fav__page
+    .tableResults
+      &::before
+        top: -10px
+      &::after
+        bottom: -25px
+    .wrapp
+      &::before
+        height: 280px
+        top: -50px
+      &::after
+        height: 280px
+        bottom: -40px

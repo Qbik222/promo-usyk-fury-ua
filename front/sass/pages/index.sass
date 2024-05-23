@@ -251,7 +251,7 @@ body
     &-descr
       margin: 60px auto 0
       width: 265px
-      font-family: $font-roboto-bold
+      font-family: $font-josefin-bold
       font-size: 22px
       line-height: 34px
       letter-spacing: 0.02em
@@ -346,13 +346,12 @@ body
     &-img
       width: 274px
       display: block
-      cursor: pointer
     &-btn
       &-plus,&-minus
         width: 66px
         height: 66px
         border-radius: 100px
-        background: #05C48A
+        background: $green
         color: $blue
         display: flex
         justify-content: center
@@ -361,6 +360,9 @@ body
         top: 50%
         transform: translateY(-50%)
         cursor: pointer
+        transition: background .4s ease
+        &:hover
+          background: $green_hover
         &:before
           content: ''
           width: 31px
@@ -565,6 +567,7 @@ body
       line-height: 23px
       text-transform: uppercase
       padding-right: 10px
+      text-align: center
       &:nth-child(1)
         width: 22%
       &:nth-child(2)
@@ -593,6 +596,7 @@ body
       font-family: $font-roboto-regular
       padding-right: 10px
       word-break: break-word
+      text-align: center
       &:nth-child(1)
         width: 23%
       &:nth-child(2)
