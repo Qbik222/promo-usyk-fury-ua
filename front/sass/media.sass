@@ -49,8 +49,8 @@
         height: 430px
         top: 7%
         right: -140px
-    &__sub
-      font-size: 38px
+    //&__sub
+    //  font-size: 38px
     &__txt
       margin-top: 10px
   .step
@@ -84,11 +84,11 @@
     .right-decor
       &::before
         width: 62%
-  .info
-    &__title,.title
-      max-width: 900px
-      font-size: 41px
-      line-height: 52px
+  //.info
+  //  &__title,.title
+  //    max-width: 900px
+  //    font-size: 41px
+  //    line-height: 52px
   .step__list
     max-width: 940px
 
@@ -115,22 +115,19 @@
     &::before, &::after
       width: 100%
   .banner
-    margin: 0 0 50px 0
     &__text
-      bottom: -10px
+      font-size: 9px
+      line-height: 12px
   .info
-    &__title, &__sub
-      font-size: 28px
-      line-height: 44px
-    &__sub
-      max-width: 420px
-      margin: 0 auto
+    //&__sub
+      //max-width: 420px
+      //margin: 0 auto
     &__txt
       font-size: 14px
       line-height: 26px
       max-width: 655px
     &__sum
-      max-width: 460px
+      max-width: 590px
 
   .step
     &__title
@@ -318,8 +315,9 @@
         padding-right: 28px
         border-radius: 8px
   .btn
-    min-width: 306px
-    padding: 22px 10px 18px
+    min-width: 375px
+    padding: 32px 50px 31px
+    font-size: 26px
 
 @media screen and (max-width: 920px)
   .fav__page
@@ -368,14 +366,21 @@
       &::before
         content: none
     .banner
+      padding: 0 0 20px 0
+      margin: 0
+      &__img
+        margin-bottom: -90%
       &::before
         height: 20%
       &__text
         width: 100%
+        padding: 0 15px
         bottom: 0
+        margin-top: 15px
+        font-size: 8px
     .info
       .container
-        max-width: 340px
+        //max-width: 340px
         padding: 0 10px
         &:after
           width: 175px
@@ -389,22 +394,22 @@
           left: -30px
       &__title,.title
         max-width: 100%
-        font-size: 20px
-        line-height: 28px
+        font-size: 15px
+        line-height: 22px
       &__sum
         margin: 25px auto 0 auto
-        max-width: 300px
+        max-width: 330px
       &__sub
-        font-size: 20px
-        line-height: 28px
-        margin-top: 15px
+        font-size: 15px
+        line-height: 20px
       &__txt
         margin-top: 15px
     .step
       &__list
-        margin: 65px 0 0
+        margin: 105px auto 0
         flex-direction: column
         z-index: 1
+        max-width: 385px
       &__item
         width: 100%
         min-height: 210px
@@ -416,7 +421,7 @@
         &:nth-child(3)
           max-width: 100%
           .step__item-descr
-            max-width: 144px
+            max-width: 190px
         &:nth-child(2), &:nth-child(3)
           .step__item-num
             max-width: 85px
@@ -446,8 +451,8 @@
             width: 300px
             height: 205px
         &-descr
-          font-size: 16px
-          line-height: 20px
+          font-size: 14px
+          line-height: 22px
           text-align: left
           z-index: 3
           margin: 0 0 40px 0
@@ -640,9 +645,9 @@
       font-size: 28px
       line-height: 36px
     .btn
-      min-width: 340px
-      font-size: 18px
-      padding: 17px 10px 14px
+      min-width: 315px
+      font-size: 21px
+      padding: 28px 30px 27px
       &:before
         left: 0
         right: 0
@@ -660,14 +665,11 @@
   .fav__page
     .info
       padding-bottom: 30px
-      &__title,.title
-        font-size: 20px
-        line-height: 29px
-      &__sum
-        margin: 25px 0
-        padding: 9px 21px 5px
-        font-size: 18px
-        line-height: 32px
+      //&__sum
+      //  margin: 25px 0
+      //  padding: 9px 21px 5px
+      //  font-size: 18px
+      //  line-height: 32px
       &__txt
         font-size: 11px
         line-height: 22px
@@ -717,11 +719,35 @@
         summary
           font-size: 11px
           line-height: 19px
-    .btn
-      min-width: 270px
     .title
       font-size: 22px
       line-height: 30px
+
+@media screen and (max-width: 350px)
+  .step
+    &__item
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3)
+        .step__item-descr
+          max-width: 150px
+
+@media screen and (max-width: 325px)
+  .fav__page
+    .btn
+      min-width: 280px
+      font-size: 19px
+      padding: 24px 30px 22px
+    .step
+      &__item
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3)
+          .step__item-descr
+            max-width: 170px
+            font-size: 12px
+            line-height: 20px
+
 
 @media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
   .fav__page

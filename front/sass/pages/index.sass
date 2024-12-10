@@ -19,6 +19,15 @@ $font-roboto-bold: Roboto-Bold, sans-serif
 //JosefinSans
 $font-josefin-bold: JosefinSans-Bold, sans-serif
 
+//NunitoSans
+$font-nunito-light-it: 'NunitoSans10pt-LightItalic', sans-serif
+$font-nunito-reg-it: 'NunitoSans10pt-Italic', sans-serif
+$font-nunito-med: 'NunitoSans10pt-Medium', sans-serif
+$font-nunito-semibold-it: 'NunitoSans10pt-SemiBoldItalic', sans-serif
+$font-nunito-bold-it: 'NunitoSans10pt-BoldItalic', sans-serif
+$font-nunito-extrabold-it: 'NunitoSans10pt-ExtraBoldItalic', sans-serif
+
+
 .black-btn
   width: 40px
   height: 20px
@@ -120,7 +129,7 @@ body.dark
 
 
 
-body
+body, body.light
   background: $blue
 
 .fav__page
@@ -170,45 +179,77 @@ body
       left: 0
       height: 10%
 .banner
-  display: block
+  display: flex
+  flex-direction: column
+  align-items: center
   position: relative
-  &::before
-    content: ""
-    display: block
-    position: absolute
-    background: linear-gradient(180deg, rgba(1, 1, 62, 0.00) 0%, $blue 100%)
-    width: 100%
-    bottom: 0
-    left: 0
-    height: 50%
+  padding-bottom: 40px
+  &__img
+    position: relative
+    margin-bottom: -13%
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      background: linear-gradient(180deg, rgba(1, 1, 62, 0.00) 0%, $blue 100%)
+      width: 100%
+      bottom: 0
+      left: 0
+      height: 50%
   &__text
-    position: absolute
-    bottom: 50px
-    left: 50%
-    transform: translate(-50%, 0)
-    width: 75%
-    z-index: 3
+    font-family: $font-nunito-med
+    color: $white
+    text-align: center
+    max-width: 640px
+    opacity: .5
+    font-size: 12px
+    line-height: 20px
+    text-transform: uppercase
+    margin-top: 30px
 .info
   padding: 15px 0 45px
   position: relative
   z-index: 3
   .container
     max-width: 100%
-  &__title,.title
-    font-size: 40px
-    line-height: 54px
-    max-width: 1000px
+  &__title
+    font-size: 24px
+    //line-height: 54px
+    max-width: 980px
+    text-transform: uppercase
+    font-family: $font-nunito-extrabold-it
     margin: auto
   &__sum
-    max-width: 630px
-    margin: 20px auto 30px auto
+    max-width: 810px
+    margin: 40px auto 50px auto
+    position: relative
+    &::before
+      content: ""
+      display: block
+      width: 160%
+      height: 300%
+      pointer-events: none
+      position: absolute
+      left: 50%
+      top: 50%
+      z-index: -1
+      transform: translate(-50%, -50%)
+      background: url("../img/sum-decor-desk.png") no-repeat 0 0/contain
+      @media screen and (max-width: 600px)
+        background: url("../img/sum-decor-mob.png") no-repeat 0 0/contain
+        width: 120%
+        height: 280%
+      //@media screen and (max-width: 374px)
+      //  width: 100%
+      //  height: 200%
   &__sub
-    font-family: $font-roboto-bold
-    font-size: 40px
-    line-height: 54px
-    text-transform: uppercase
+    font-family: $font-nunito-reg-it
+    font-size: 17px
+    line-height: 23px
     position: relative
     z-index: 1
+    max-width: 980px
+    margin: 15px auto
   &__txt
     margin: 16px auto 0
     max-width: 720px
@@ -233,6 +274,8 @@ body
     display: flex
     justify-content: space-between
     position: relative
+  .drop
+    margin-top: 40px
   &__item
     picture
       position: relative
@@ -248,9 +291,9 @@ body
         z-index: 0
     &-descr
       margin: 60px auto 0
-      width: 265px
-      font-family: $font-josefin-bold
-      font-size: 22px
+      width: 335px
+      font-family: $font-nunito-bold-it
+      font-size: 24px
       line-height: 34px
       letter-spacing: 0.02em
       text-transform: uppercase
@@ -308,6 +351,10 @@ body
   &::after
     bottom: -1px
     background: linear-gradient(180deg, rgba(1, 1, 62, 0.00) 0%, $blue 80%)
+  &__title
+    margin-bottom: 160px
+    z-index: 4
+    position: relative
   &__wrapp
     max-width: 900px
     margin: 55px auto 40px
@@ -319,6 +366,12 @@ body
   &__team
     position: relative
     z-index: 1
+    &.player1
+      left: -90px
+      top: 15px
+    &.player2
+      right: -90px
+      top: 15px
     &:first-child
       .prediction__team-img
         img
@@ -378,25 +431,28 @@ body
   &__flex
     z-index: 2
     position: relative
-    min-width: 350px
+    min-width: 300px
     display: flex
     justify-content: center
     align-items: center
     &:before
       content: ''
-      background: url("../img/circle.png") no-repeat 0 0/contain
-      width: 100%
-      min-height: 300px
+      //background: url("../img/circle.png") no-repeat 0 0/contain
+      background: url("../img/counter-bg.png") no-repeat 0 0/contain
+      min-width: 990px
+      max-width: 990px
+      min-height: 640px
       position: absolute
-      top: -99px
-      left: 24px
-      right: 0
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -67%)
       margin: auto
       animation: 4s dropShadow ease infinite
   &__score
     font-family: $font-roboto-medium
-    font-size: 100px
+    font-size: 120px
     text-transform: uppercase
+    text-shadow: 0px 4px 6px #000D23, 0px 0px 15px #0331F8, 0px 0px 15px #0331F8, 0px 5px 0px #333D48
     user-select: none
     z-index: 1
   &__last
@@ -409,37 +465,40 @@ body
     align-items: center
     text-transform: uppercase
     &-boxer1, &-boxer2
-      font-family: $font-roboto-regular
+      font-family: $font-nunito-semibold-it
       letter-spacing: 0.01em
-      font-size: 18px
-      opacity: .5
-      color: $white
+      font-size: 20px
+      text-shadow: 0px 4px 6px #000D23, 0px 0px 15px #FF267E, 0px 0px 15px #FF267E
+      color: rgba($white, .5)
     &-wrapp
-      margin-top: 17px
+      //margin-top: 17px
       display: flex
       align-items: center
       flex-direction: column
     &-txt
-      font-family: $font-roboto-medium
+      font-family: $font-nunito-extrabold-it
+      font-size: 24px
+      text-shadow: 0px 4px 6px #000D23, 0px 0px 15px #0331F8, 0px 0px 15px #0331F8, 0px 5px 0px #333D48
+
     &-team
       display: flex
       align-items: center
       gap: 15px
-      font-family: $font-roboto-regular
+      font-family: $font-nunito-med
     &-score
-      font-family: $font-roboto-regular
+      font-family: $font-nunito-semibold-it
       color: $white
       span
-        font-family: $font-roboto-regular
+        font-family: $font-nunito-med
   &__step
     text-transform: uppercase
-    font-family: $font-roboto-bold
+    font-family: $font-nunito-med
     font-size: 22px
     position: absolute
     left: 0
   &__yourBet
     margin-top: 20px
-    font-family: $font-roboto-bold
+    font-family: $font-nunito-med
     font-size: 16px
     letter-spacing: 0.04em
     text-transform: uppercase
@@ -448,7 +507,7 @@ body
     display: flex
     justify-content: center
     &-true,&-false
-      font-family: $font-roboto-medium
+      font-family: $font-nunito-med
       padding: 12px 35px
       text-transform: uppercase
       font-size: 18px
@@ -458,7 +517,7 @@ body
       box-shadow: 0 1px 2px 0 rgba($white, 0.10) inset
       filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.20))
       span
-        font-family: $font-roboto-medium
+        font-family: $font-nunito-med
         display: block
     &-true
       color: $green_2
@@ -553,20 +612,21 @@ body
     border-bottom: 0.5px solid rgba($white, 0.12)
     display: flex
     &-col
-      font-family: $font-roboto-medium
+      font-family: $font-nunito-extrabold-it
       font-size: 20px
       line-height: 23px
       text-transform: uppercase
       padding-right: 10px
       text-align: center
+      text-shadow: 0px 4px 6px #000D23, 0px 0px 15px #0331F8, 0px 0px 15px #0331F8, 0px 5px 0px #333D48
       &:nth-child(1)
-        width: 22%
+        width: 17%
       &:nth-child(2)
         width: 28%
       &:nth-child(3)
         width: 23%
       &:nth-child(4)
-        width: 27%
+        width: 28%
   &__body
     margin: 20px 27px 0 0
     padding: 0 32px 0 60px
@@ -584,7 +644,7 @@ body
       background: #06CFA1
       border-radius: 8px
     &-col
-      font-family: $font-roboto-regular
+      font-family: $font-nunito-light-it
       padding-right: 10px
       word-break: break-word
       text-align: center
@@ -733,29 +793,31 @@ body
   margin: auto
 
 .title
-  font-family: $font-roboto-bold
-  font-size: 50px
+  font-family: $font-nunito-extrabold-it
+  font-size: 48px
   line-height: 68px
   text-transform: uppercase
+  text-shadow: 0px 4px 6px #000D23, 0px 0px 15px #0331F8, 0px 0px 15px #0331F8
 
 .btn
-  min-width: 311px
-  padding: 23px 20px 21px
-  font-family: $font-roboto-bold
-  font-size: 26px
+  min-width: 480px
+  padding: 43px 48px 45px
+  font-family: $font-nunito-extrabold-it
+  font-size: 30px
   text-transform: uppercase
   letter-spacing: 0.02em
-  text-shadow: 0 1px 1px rgba($black, .4)
-  color: $blue_2
-  background: $green
+  color: $white
+  background: url("../img/btn-bg.png") no-repeat 0 0/contain
   display: inline-block
   cursor: pointer
-  border-radius: 80px
-  transition: background .3s linear
+  text-shadow: 2px 5px 4px rgba($black, 0.25)
+  //border-radius: 80px
   position: relative
-  z-index: 2
+  z-index: 3
+  transition: filter .5s ease-in-out
   &:hover
-    background: $green_hover
+    cursor: pointer
+    filter: drop-shadow(0 0 7px #FDF5AE)
 
 .hide
   display: none!important
