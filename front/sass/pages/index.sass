@@ -538,6 +538,12 @@ body, body.light
     margin-top: 30px
     display: flex
     justify-content: center
+    flex-direction: column
+    &-text
+      margin-top: 15px
+      color: $white
+      font-size: 20px
+      font-family: $font-nunito-bold-it
     &-true,&-false
       font-family: $font-nunito-med
       padding: 12px 35px
@@ -614,6 +620,10 @@ body, body.light
 .tableResults
   position: relative
   z-index: 2
+  .table-round
+    font-family: inherit
+    color: $white
+
   &::before, &::after
     content: ""
     display: block

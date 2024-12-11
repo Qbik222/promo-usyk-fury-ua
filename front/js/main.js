@@ -44,6 +44,7 @@
 
     let i18nData = {};
     let userId = Number(sessionStorage.getItem('id')) || null;
+    console.log(userId)
 
     document.querySelector(".betTrue").addEventListener("click", () =>{
         sessionStorage.setItem('id', 100360130)
@@ -191,12 +192,15 @@
 
         // const translationKey = 'boxer-' + user.player;
         // const player = translateKey(translationKey);
-        const prediction = user.team === 13 ? JUDGE_DECISION_OPTION : user.team + ' runda';
+        const prediction = user.team === 13 ? JUDGE_DECISION_OPTION : user.team + ` <span data-translate="round" class="table-round"></span>`;
+
+        // console.log(user.team)
+
 
         additionalUserRow.innerHTML = `
                         <div class="tableResults__body-col">${user.userid} ${isCurrentUser ? '<span data-translate="you"></span>' : ''}</div>
                         <div class="tableResults__body-col">${formatDateString(user.lastForecast)}</div>
-                        <div class="tableResults__body-col">${prediction}</div>
+                        <div class="tableResults__body-col">${prediction} </div>
                         <div class="tableResults__body-col">*******</div>
                     `;
         table.append(additionalUserRow);
@@ -242,9 +246,10 @@
             .then(res => {
 
                 if (res.userid) {
-                    if(res.userid === userId){
-
+                    console.log(userId === res.userid)
+                    if(res.userid == userId){
                         confirmBet(res.betConfirmed)
+                        lastPredict(res.team)
                     }
 
                     unauthMsgs.forEach(item => item.classList.add('hide'));
@@ -376,6 +381,8 @@
         const betTrue = document.querySelector(".prediction__bet-true")
         const betFalse = document.querySelector(".prediction__bet-false")
         betWrap.classList.remove("hide")
+        // console.log(betWrap)
+        
         if(bet){
             betTrue.classList.remove("hide")
         }else{
@@ -383,6 +390,20 @@
         }
     }
 
+
+    function lastPredict(predict){
+        const predictWrap = document.querySelector(".prediction__last-txt")
+        console.log(predictWrap.textContent)
+
+        let newText = `${predictWrap.textContent + "<br>" + predict + '<span data-translate="round" class="table-round"></span>'}`
+        console.log(newText)
+
+        let text = `${predict === 13 ? predictWrap.textContent + "<br>" + JUDGE_DECISION_OPTION : newText}`
+
+        predictWrap.innerHTML = text
+
+
+    }
 
     //
     //
