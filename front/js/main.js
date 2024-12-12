@@ -17,23 +17,7 @@
 
     const enLeng = document.querySelector('#hrLeng');
 
-    // let locale = 'en';
-
-    let locale = sessionStorage.getItem('locale') || 'en';
-
-    function setState(newLocale) {
-        locale = newLocale;
-        sessionStorage.setItem('locale', locale);
-    }
-    function toggleState() {
-        const newLocale = locale === 'en' ? 'uk' : 'en';
-        setState(newLocale);
-        window.location.reload()
-    }
-    document.querySelector('.en-btn').addEventListener('click', () => {
-        toggleState();
-
-    });
+    let locale = 'uk'
 
     if (enLeng) locale = 'en';
 
@@ -43,27 +27,8 @@
 
 
     let i18nData = {};
-    let userId = Number(sessionStorage.getItem('id')) || null;
-    console.log(userId)
+    let userId;
 
-    document.querySelector(".betTrue").addEventListener("click", () =>{
-        sessionStorage.setItem('id', 100360130)
-        window.location.reload()
-    })
-    document.querySelector(".betFalse").addEventListener("click", () =>{
-        sessionStorage.setItem('id', 100300268)
-        window.location.reload()
-    })
-    document.querySelector(".unAuth").addEventListener("click", () =>{
-        sessionStorage.removeItem('id')
-        window.location.reload()
-    })
-    document.querySelector(".menu-btn").addEventListener("click", () =>{
-        document.querySelector(".menu-btns").classList.toggle("hide")
-    })
-    // userId = 1457027;
-    // userId = 100300268
-    // userId = 100360130
     function loadTranslations() {
         return fetch(`${apiURL}/translates/${locale}`).then(res => res.json())
             .then(json => {
@@ -167,13 +132,11 @@
 
     function populateUsersTable(users, currentUserId, table) {
         table.innerHTML = '';
-        // console.log(users)
         if (users && users.length) {
             const currentUser = userId && users.find(user => user.userid === currentUserId);
             if (currentUser) {
                 displayUser(currentUser, true, table);
             }
-
             users.forEach((user) => {
                 if (user.userid !== currentUserId) {
                     displayUser(user, false, table);
@@ -186,16 +149,12 @@
         const additionalUserRow = document.createElement('div');
         additionalUserRow.classList.add('tableResults__row');
         if (isCurrentUser) {
-            // updateLastPrediction(user);
             additionalUserRow.classList.add('you');
         }
 
         // const translationKey = 'boxer-' + user.player;
         // const player = translateKey(translationKey);
         const prediction = user.team === 13 ? JUDGE_DECISION_OPTION : user.team + ` <span data-translate="round" class="table-round"></span>`;
-
-        // console.log(user.team)
-
 
         additionalUserRow.innerHTML = `
                         <div class="tableResults__body-col">${user.userid} ${isCurrentUser ? '<span data-translate="you"></span>' : ''}</div>
@@ -206,24 +165,24 @@
         table.append(additionalUserRow);
     }
 
-    function updateLastPrediction(data) {
-        const translationKey = 'boxer-' + data.player;
-        const player = translateKey(translationKey);
-        const predictedPlayerDiv = document.querySelector('.prediction__last-team');
-        predictedPlayerDiv.innerHTML = player;
-
-        const scoreDiv = document.querySelector('.prediction__last-score');
-        scoreDiv.innerHTML = data.score == 0 ? JUDGE_DECISION_OPTION : `<span class="scoreTeam1">${data.score} </span>` + 'runda';
-
-        const lastPrediction = document.querySelector('.prediction__last');
-        lastPrediction.classList.remove('hide');
-
-        // const predictionStatusDiv = document.querySelector('.prediction__bet');
-        // predictionStatusDiv.classList.remove('hide');
-
-        const predictionConfirmed = document.querySelector(`.prediction__bet-${data.betConfirmed || false}`);
-        predictionConfirmed.classList.add('betScale');
-    }
+    // function updateLastPrediction(data) {
+    //     const translationKey = 'boxer-' + data.player;
+    //     const player = translateKey(translationKey);
+    //     const predictedPlayerDiv = document.querySelector('.prediction__last-team');
+    //     predictedPlayerDiv.innerHTML = player;
+    //
+    //     const scoreDiv = document.querySelector('.prediction__last-score');
+    //     scoreDiv.innerHTML = data.score == 0 ? JUDGE_DECISION_OPTION : `<span class="scoreTeam1">${data.score} </span>` + 'runda';
+    //
+    //     const lastPrediction = document.querySelector('.prediction__last');
+    //     lastPrediction.classList.remove('hide');
+    //
+    //     // const predictionStatusDiv = document.querySelector('.prediction__bet');
+    //     // predictionStatusDiv.classList.remove('hide');
+    //
+    //     const predictionConfirmed = document.querySelector(`.prediction__bet-${data.betConfirmed || false}`);
+    //     predictionConfirmed.classList.add('betScale');
+    // }
 
     function formatDateString(dateString) {
         const date = new Date(dateString);
@@ -381,8 +340,6 @@
         const betTrue = document.querySelector(".prediction__bet-true")
         const betFalse = document.querySelector(".prediction__bet-false")
         betWrap.classList.remove("hide")
-        // console.log(betWrap)
-        
         if(bet){
             betTrue.classList.remove("hide")
         }else{
@@ -401,73 +358,6 @@
         let text = `${predict === 13 ? predictWrap.textContent + "<br>" + JUDGE_DECISION_OPTION : newText}`
 
         predictWrap.innerHTML = text
-
-
     }
 
-    //
-    //
-    // function displayRound(choice) {
-    //     return choice === 0 ? JUDGE_DECISION_OPTION : choice;
-    // }
-    //
-    // function normalizeScore(score) {
-    //     if (score < 0) {
-    //         return score + CHOICES_COUNT;
-    //     }
-    //     if (score > 12) {
-    //         return score - CHOICES_COUNT;
-    //     }
-    //     return score;
-    // }
-    // function initScoreSelector() {
-    //     const minusBtn = document.querySelector(`.prediction__team-btn-minus`);
-    //     const plusBtn = document.querySelector(`.prediction__team-btn-plus`);
-    //     const scorePanel = document.querySelector(`.prediction__score`);
-    //
-    //
-    //
-    //
-    //     minusBtn.addEventListener('click', () => {
-    //         scorePrediction.score = normalizeScore(scorePrediction.score - 1);
-    //         scorePanel.innerHTML = displayRound(scorePrediction.score);
-    //         console.log(scorePrediction.score)
-    //         if(scorePrediction.score === 0){
-    //             scorePanel.classList.add("small-score")
-    //         }else{
-    //             scorePanel.classList.remove("small-score")
-    //         }
-    //
-    //     });
-    //
-    //     plusBtn.addEventListener('click', () => {
-    //         scorePrediction.score = normalizeScore(scorePrediction.score + 1);
-    //         scorePanel.innerHTML = displayRound(scorePrediction.score);
-    //         console.log(scorePrediction.score)
-    //         if(scorePrediction.score === 0){
-    //             scorePanel.classList.add("small-score")
-    //         }else{
-    //             scorePanel.classList.remove("small-score")
-    //         }
-    //     });
-    // }
-
-
-
-    // for test
-    const blackBtn = document.querySelector(".black-btn")
-
-    blackBtn.addEventListener("click", () =>{
-        document.body.classList.toggle("dark")
-    })
-
 })();
-
-
-
-
-
-// function init() {
-//        ;
-// }
-// init()

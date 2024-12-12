@@ -1,13 +1,4 @@
 .fav__page#predictor
-
-    .menu
-        button.menu-btn menu
-        .menu-btns
-            button.black-btn dark
-            button.en-btn en
-            button.betTrue betTrue
-            button.betFalse betFalse
-            button.unAuth unAuth
     .right-decor
     .left-decor
     .banner
@@ -26,16 +17,10 @@
                 img(src="./img/banner_desk-en.jpg", alt="FAVBET")
         a(href="/login/" data-translate="login").banner__btn.btn.unauth-msg
         a(href="/sports/event/boxing/41219189/" data-translate="betBtn").banner__btn.btn.took-part.hide
-        .banner__text(data-translate="bannerText") *Під призовим фондом у 1 000 000 ₴ мається на увазі отримання призу у вигляді електронних грошових замінників в Акції «Раунд на мільйон». Період дії акції – з 12:00 17.12.2024 по 00:29 22.12.2024 року. Деталі акції на сайті favbet.ua
-        //picture.banner__text
-        //    source(media="(min-width: 1001px)" srcset="./img/banner_text-desk.png")
-        //    source(media="(max-width: 920px) and (max-height: 450px)" srcset="./img/banner_text-tab.png")
-        //    source(media="(min-width: 701px) and (max-width: 1000px)" srcset="./img/banner_text-tab.png")
-        //    source(media="(max-width: 700px)" srcset="./img/banner_text-mob.png")
-        //    img(src="./img/banner_text-desk.png", alt="FAVBET")
+        .banner__text(data-translate="bannerText")
     .info
         .container
-            .info__title(data-translate="infoTitle") Такий довгоочікуваний реванш вже за кілька днів. Ділися передбаченнями щодо результатів бою Олександр Усик - Тайсон Ф'юрі та забери свою частину від
+            .info__title(data-translate="infoTitle")
             .info__sum
                 picture
                     source(media="(min-width: 1001px)" srcset="./img/sum-desk.png")
@@ -43,12 +28,11 @@
                     source(media="(min-width: 701px) and (max-width: 1000px)" srcset="./img/sum-tab.png")
                     source(media="(max-width: 700px)" srcset="./img/sum-mob.png")
                     img(src="./img/sum-desk.png", alt="FAVBET")
-            .info__sub(data-translate="infoSub") З 17 до 22 грудня 2024 року бери участь в акції «Раунд на мільйон».
-            .info__sub(data-translate="infoTxt") 22 грудня 2024 року дивись бій «Олександр Усик - Тайсон Ф'юрі», прогнозуй, в якому раунді закінчиться бій, зроби ставку від 200 ₴ та отримай шанс розділити призовий фонд 1 000 000 ₴.
-            //.info__txt(data-translate="infoTxt") Od 24. svibnja do 01. lipnja 2024. sudjeluj u promociji «Nokaut runda». Ostavi točnu prognozu konačnog rezultata meča «Filip Hrgović - Daniel Dubois», izvrši okladu od 5 EUR te ostvari priliku osvojiti dio nagradnog fonda do 3000 EUR.
+            .info__sub(data-translate="infoSub")
+            .info__sub(data-translate="infoTxt")
     .step
         .container
-            .step__title.title(data-translate="stepTitle") Як взяти участь?
+            .step__title.title(data-translate="stepTitle")
             .step__list
                 .step__item
                     .step__item-num
@@ -58,7 +42,7 @@
                             source(media="(min-width: 701px) and (max-width: 1000px)" srcset="./img/num-1.png")
                             source(media="(max-width: 700px)" srcset="./img/num-1-mob.png")
                             img(src="./img/num-1.png", alt="FAVBET")
-                    .step__item-descr(data-translate="step-1") Обери, в якому раунді закінчиться бій
+                    .step__item-descr(data-translate="step-1")
                 .step__item
                     .step__item-num
                         picture
@@ -67,7 +51,7 @@
                             source(media="(min-width: 701px) and (max-width: 1000px)" srcset="./img/num-2.png")
                             source(media="(max-width: 700px)" srcset="./img/num-2-mob.png")
                             img(src="./img/num-2.png", alt="FAVBET")
-                    .step__item-descr(data-translate="step-2") Натисни кнопку «Зробити прогноз»
+                    .step__item-descr(data-translate="step-2")
                 .step__item
                     .step__item-num
                         picture
@@ -76,21 +60,15 @@
                             source(media="(min-width: 701px) and (max-width: 1000px)" srcset="./img/num-3.png")
                             source(media="(max-width: 700px)" srcset="./img/num-3-mob.png")
                             img(src="./img/num-3.png", alt="FAVBET")
-                    .step__item-descr(data-translate="step-3") ЗРОБИ СТАВКУ ВІД 200 ₴ ЛИШЕ «ОРДИНАР» КОЕФІЦІЄНТ ВІД 2.0
+                    .step__item-descr(data-translate="step-3")
             .step__details.drop
                 details.dropdown
-                    summary(data-translate="stepDetails") Деталі
+                    summary(data-translate="stepDetails")
                     .drop-txt
                         .drop-txt-list(data-translate="stepDetailsList")
-                            strong 1.Pogodi odlučujuću rundu meča
-                            p Ostavi točnu prognozu na stranici promocije na način da odabereš jednog od boksača i odlučujuću rundu meča ili O/S (odluka sudaca).
-                            strong 2. Klikni na gumb “Ostavi prognozu”
-                            p PPoslije unošenja točnog rezultata klikni na gumb “Ostavi prognozu”. U promociji će se uzeti u obzir samo posljednja prognoza koju je Sudionik ostavio prije početka meča.
-                            strong 3. Odigraj listić od 5 EUR
-                            p Od 24. svibnja u 11:00:00 do 01. lipnja u 22:59:59 odigraj listić od 5 EUR na meč “Filip Hrgović - Daniel Dubois”, navodeći točan konačni rezultat te ostvari šansu za osvojiti dio nagradnog fonda do 3000 EUR.
     .prediction
         .container
-            .prediction__title.title(data-translate="predictionTitle") ЗРОБИ СВІЙ ПРОГНОЗ
+            .prediction__title.title(data-translate="predictionTitle")
             .prediction__wrapp
                 .prediction__team.player1
                     picture.prediction__team-img.uk
@@ -101,10 +79,6 @@
                         source(media="(min-width: 701px)" srcset="./img/left-predict-en.png")
                         source(media="(max-width: 700px)" srcset="./img/left-predict-mob-en.png")
                         img(src="./img/left-predict-en.png", alt="FAVBET")
-                    //picture.prediction__team-name
-                    //    source(media="(min-width: 701px)" srcset="./img/boxer1_name-desk.png")
-                    //    source(media="(max-width: 700px)" srcset="./img/boxer1_name-mob.png")
-                    //    img(src="./img/boxer1_name-desk.png", alt="FAVBET")
                 .prediction__flex
                     .prediction__score 1
                     .prediction__team-btn-plus.team2-plus(role="button")
@@ -118,19 +92,11 @@
                         source(media="(min-width: 701px)" srcset="./img/right-predict-en.png")
                         source(media="(max-width: 700px)" srcset="./img/right-predict-mob-en.png")
                         img(src="./img/right-predict-en.png", alt="FAVBET")
-                    //picture.prediction__team-name
-                    //    source(media="(min-width: 701px)" srcset="./img/boxer2_name-desk.png")
-                    //    source(media="(max-width: 700px)" srcset="./img/boxer2_name-mob.png")
-                    //    img(src="./img/boxer2_name-desk.png", alt="FAVBET")
             a(href="/login/" role="button" data-translate="login").prediction__btn.btn.unauth-msg
             .prediction__btn.btn.took-part.hide(data-translate="partBtn")
             .prediction__last.hide
-                .prediction__last-txt(data-translate="lastPrediction") Твій останній прогноз
+                .prediction__last-txt(data-translate="lastPrediction")
                 .prediction__last-wrapp
-                    //.prediction__last-team
-                    //    .prediction__last-boxer1(data-translate="boxer-1") Олександр Усик
-                    //    .prediction__last-score(data-translate="lastScore") 12/0
-                    //    .prediction__last-boxer2(data-translate="boxer-2") Тайсон Фʼюрі
                     .prediction__bet
                         .prediction__bet-true.hide
                             span(data-translate="betTrue")
@@ -141,100 +107,19 @@
         .wrapp__bg
         .tableResults
             .container
-                .tableResults__title.title(data-translate="tableTitle") Учасники
+                .tableResults__title.title(data-translate="tableTitle")
                 .tableResults__wrapp
                     .tableResults__head
-                        .tableResults__head-col(data-translate="tableHeadID") ID
-                        .tableResults__head-col(data-translate="tableHeadDate") Дата та час
-                        .tableResults__head-col(data-translate="tableHeadPrediction") Раунд 1
-                        .tableResults__head-col(data-translate="tableHeadPrizes") Приз*
+                        .tableResults__head-col(data-translate="tableHeadID")
+                        .tableResults__head-col(data-translate="tableHeadDate")
+                        .tableResults__head-col(data-translate="tableHeadPrediction")
+                        .tableResults__head-col(data-translate="tableHeadPrizes")
                     .tableResults__body#top-users
-                        .tableResults__row
-                            .tableResults__body-col ******67
-                            .tableResults__body-col 08.08.2023 / 20:00
-                            .tableResults__body-col 2:0
-                            .tableResults__body-col *********
-                        .tableResults__row
-                            .tableResults__body-col ******67
-                            .tableResults__body-col 08.08.2023 / 20:00
-                            .tableResults__body-col 2:0
-                            .tableResults__body-col *********
-
-                        .tableResults__row
-                            .tableResults__body-col ******67
-                            .tableResults__body-col 08.08.2023 / 20:00
-                            .tableResults__body-col 2:0
-                            .tableResults__body-col *********
-
-                        .tableResults__row
-                            .tableResults__body-col ******67
-                            .tableResults__body-col 08.08.2023 / 20:00
-                            .tableResults__body-col 2:0
-                            .tableResults__body-col *********
-
-                        .tableResults__row
-                            .tableResults__body-col ******67
-                            .tableResults__body-col 08.08.2023 / 20:00
-                            .tableResults__body-col 2:0
-                            .tableResults__body-col *********
-
-                        .tableResults__row
-                            .tableResults__body-col ******67
-                            .tableResults__body-col 08.08.2023 / 20:00
-                            .tableResults__body-col 2:0
-                            .tableResults__body-col *********
-
-                        .tableResults__row
-                            .tableResults__body-col ******67
-                            .tableResults__body-col 08.08.2023 / 20:00
-                            .tableResults__body-col 2:0
-                            .tableResults__body-col *********
-
-                        .tableResults__row
-                            .tableResults__body-col ******67
-                            .tableResults__body-col 08.08.2023 / 20:00
-                            .tableResults__body-col 2:0
-                            .tableResults__body-col *********
-
-                        .tableResults__row
-                            .tableResults__body-col ******67
-                            .tableResults__body-col 08.08.2023 / 20:00
-                            .tableResults__body-col 2:0
-                            .tableResults__body-col *********
-
                 .tableResults__txt(data-translate="tableTxt")
                 a(href="/sports/event/boxing/41219189/" target="_blank" role="button" data-translate="betBtn").tableResults__btn.btn.took-part.hide
                 a(href="/login/" target="_blank" role="button" data-translate="login").tableResults__btn.btn.unauth-msg
     .rules.drop
         details.dropdown
-            summary(data-translate="terms") Službena pravila sudjelovanja u promociji  «Boksački stručnjak»
+            summary(data-translate="terms")
             .drop-txt
                 .drop-txt-list(data-translate="termsList")
-                    strong 1) Organizator Promocije
-                    p 1.1. Organiziranje і provođenje Promocije regulirani su ovim pravilima (dalje u tekstu: Pravila), koja su službeno objavljena na web stranici  www.favbet.hr.
-                    strong 2) Cilj provođenja Promocije – popularizacija brenda Priređivača igara na sreću.
-                    p 2.1. Rezultat završetka Promocije je dodjela nagrada sudionicima Promocije.
-                    p 2.2. Mjesto provođenja Promocije je web stranica www.favbet.hr.
-                    p 2.3. Promocija se održava od 24.05.2024. u 11:00:00  do 01.06.2024. u 22:59:59 (do početka meča “Filip Hrgović - Daniel Dubois”).
-                    strong 3) Postupak sudjelovanja u promociji:
-                    p 3.1. Za sudjelovanje u Promociji, prije početka meča "Filip Hrgović - Daniel Dubois", odnosno do 01.06.2024. u 22:59:59, sudionik mora ostaviti točnu prognozu konačnog rezultata meča na stranici Promocije, zatim kliknuti na gumb “Ostavi prognozu”, nakon čega kliknuti na gumb “Odigraj listić” te se kladiti na meč i time sudjelovati u sportskom klađenju priređivača pod uvjetom da je iznos minimalne oklade 5 EUR .
-                    p 3.2. U Promociji se može sudjelovati samo do početka meča (do 01.06.2024. u 22:59:59).
-                    p 3.3. Za sudjelovanje u Promociji uzima se u obzir samo posljednja ostavljena prognoza svakog Sudionika, koja je prikazana u tablici “Sudionici” na stranici Promocije (tablica “Sudionici” nalazi se na stranici Promocije, u odjeljku “Detaljiі”).
-                    p 3.4 Nakon što je ostavio prognozu na stranici Promocije, Sudionik mora obavezno odigrati listić za meč “Filip Hrgović - Daniel Dubois”. Za potvrdu sudjelovanja u promociji uzimaju se u obzir sljedeće oklade: <br>• Minimalan iznos oklade - 5 EUR. <br>• Vrsta oklade - Obična; <br>•  Minimalan tečaj obične oklade – 1.2; <br>•  Prihvaćaju se samo oklade na meč “Filip Hrgović - Daniel Dubois”; <br>•  Prihvaćaju se samo oklade u odjeljku Sport. <br>• Oklade u odjeljku LIVE ne sudjeluju u Promociji. <br>• U Promociji sudjeluju samo obračunati dobitni listići. <br>• Oklade s oznakom “Bez rizika” i/ili “Povrat” se ne prihvaćaju.
-                    p 3.5. Dobitnicima Promocije se smatraju sudionici koji su ostavili točan konačni rezultat meča “Filip Hrgović - Daniel Dubois”, koji će se održati 01.06.2024. u 22:59:59. godine, te koji su odigrali dobitan listić u skladu s uvjetima navedenima u točki. 3.4 ovih pravila.
-                    p 3.6. Tablica u odjeljku “Sudionici” je tablica s podacima o aktivnosti sudionika promocije koja se nalazi na stranici Promocije u odjeljku “Sudionici”. Tablica prikazuje posljednju prognozu za meč svakog sudionika P romocije
-                    p 3.7. Tablica prikazuje podatke tijekom trajanja Promocije, a nakon završetka Promocije podaci u tablici se prestaju ažurirati.
-                    strong 4. Nagrade Promocije:
-                    p 4.1. Promocijske nagrade obračunavaju se unutar dva radna dana nakon završetka Promocije (do 04.06.2024. u 23:59:59).
-                    p 4.2. Nagradni fond od 3000 eura bit će podijeljen među svim sudionicima koji su na stranici promocije ostavili točan konačni rezultat te izvršili potvrdu oklade čiji su uvjeti navedeni u točki 3.4. ovih Pravila. U obzir se uzima samo posljednja prognoza koju je Sudionik ostavio prije početka meča. (do 01.06.2024. u 22:59:59).
-                    p Naprimjer: ako bude 100 sudionika s točno pogođenim rezultatom, tada će se obračunavati na sljedeći način – 3000/100 = 30 EUR, koji će biti dodani na račun svakog dobitnika promocije, primjerice ukoliko budu 2 sudionika sa točno pogođenim rezultatom tada će se i dalje biti maksimalan iznos dobitka 50 EUR po dobitniku. Ukoliko bude slučaj sa 1500 sudionika sa pogođenim rezultatom, tada će se obračunavati nagrada 1 EUR po dobitniku.
-                    p 4.2.1. Maksimalan iznos dobitka – 50 EUR  po dobitniku, neovisno o broju sudionika koji su pogodili točan rezultat.
-                    p 4.2.2. Minimalan iznos dobitka – 1 EUR po dobitniku, neovisno o broju sudionika koji su pogodili točan rezultat.
-                    p 4.2.3. Ukupni nagradni fond Promocije je 3000 EUR.
-                    p 4.3. Tijekom trajanja Promocije, automatsko ažuriranje navedenih prognoza Sudionika u tablici vršit će se svakih 10 minuta za svakog Sudionika, ovisno o ispunjavanju uvjeta navedenih u ovim Pravilima.
-                    p 4.4. Poslije obračuna dobitaka Dobitnika,  na njihov osobni račun će biti poslana poruka o dobicima u Promociji.
-                    p 4.5. Dobitnik Promocije ima pravo izvršiti oklade u omjeru  х1 iznosa dobitka u odjeljcima Sport, LIVE ili Casino unutar web stranice  favbet.hr te preuzeti osvojene nagrade na svom osobnom računu  u odjeljku “Bonusi” u roku od 5 kalendarskih dana od trenutka osvajanja. Ako sudionik nije izvršio okladu u ispravnom iznosu i/ili nije preuzeo osvojenu nagradu u navedenom roku, gubi pravo dobivanja nagrade.
-
-
-/// new keys :
-    bannerText

@@ -1,5 +1,5 @@
 $blue: #01013E
-$blue_2: #000055
+//$blue_2: #000055
 $gray: #E1E1E1
 $gray_2: #E8E8E8
 $gray_3: #ECEAEA
@@ -16,10 +16,10 @@ $font-suisse-regular: SuisseIntl-Regular, sans-serif
 
 //Roboto
 $font-roboto-regular: Roboto-Regular, sans-serif
-$font-roboto-medium: Roboto-Medium, sans-serif
+//$font-roboto-medium: Roboto-Medium, sans-serif
 $font-roboto-bold: Roboto-Bold, sans-serif
 //JosefinSans
-$font-josefin-bold: JosefinSans-Bold, sans-serif
+//$font-josefin-bold: JosefinSans-Bold, sans-serif
 
 //NunitoSans
 $font-nunito-light-it: 'NunitoSans10pt-LightItalic', sans-serif
@@ -29,27 +29,6 @@ $font-nunito-semibold-it: 'NunitoSans10pt-SemiBoldItalic', sans-serif
 $font-nunito-bold-it: 'NunitoSans10pt-BoldItalic', sans-serif
 $font-nunito-extrabold-it: 'NunitoSans10pt-ExtraBoldItalic', sans-serif
 $font-nunito-extrabold: 'NunitoSans10pt-ExtraBold', sans-serif
-
-.menu
-  background: white
-  color: black
-  font-size: 12px
-  position: fixed
-  top: 0
-  z-index: 10
-  right: 0
-  display: flex
-  flex-direction: column
-  max-width: 60px
-  &-btns
-    display: flex
-    flex-direction: column
-
-
-
-
-
-
 
 body.dark
   background: $black_2
@@ -79,7 +58,6 @@ body.dark
       &__img
         &::before
           background: linear-gradient(180deg, rgba(12, 12, 12, 0.00) 0%, $black_2 80%)
-
     .step
       &__item
         &:nth-child(1)
@@ -88,8 +66,6 @@ body.dark
               background: url("../img/light-left-desk-dark.png") no-repeat 0 0/contain
               @media screen and (max-width: 700px)
                   background: url("../img/light-left-mob-dark.png") no-repeat 0 0/contain
-
-
         &:nth-child(2)
           .step__item-num
             &::before
@@ -97,8 +73,6 @@ body.dark
               @media screen and (max-width: 700px)
                 left: -80px
                 background: url("../img/light-right-mob-dark.png") no-repeat 0 0/contain
-
-
         &:nth-child(3)
           .step__item-num
             &::before
@@ -131,22 +105,17 @@ body.dark
       .wrapp
         &::before
           background: url("../img/table-decor-tab-bottom-dark.png") no-repeat 0 170%/cover
-
         &::after
           background: url("../img/table-decor-tab-top-dark.png") no-repeat 0 0/cover
           @media screen and (max-width: 700px) and (orientation: portrait)
             background: url("../img/table-decor-tab-top-dark.png") no-repeat 0 0/contain
             bottom: 130px
-
-
       .tableResults
         &::after
           background: linear-gradient(0deg, rgba(12, 12, 12, 0.00) 0%, $black_2 100%)
           height: 370px
         &::before
           background: linear-gradient(0deg, rgba(12, 12, 12, 0.00) 0%, $black_2 90%)
-
-
 
 body, body.light
   background: $blue
@@ -237,7 +206,6 @@ body, body.light
     max-width: 100%
   &__title
     font-size: 24px
-    //line-height: 54px
     max-width: 980px
     text-transform: uppercase
     font-family: $font-nunito-extrabold-it
@@ -262,9 +230,6 @@ body, body.light
         background: url("../img/sum-decor-mob.png") no-repeat 0 0/contain
         width: 120%
         height: 280%
-      //@media screen and (max-width: 374px)
-      //  width: 100%
-      //  height: 200%
   &__sub
     font-family: $font-nunito-reg-it
     font-size: 17px
@@ -476,7 +441,6 @@ body, body.light
       left: 50%
       transform: translate(-50%, -67%)
       margin: auto
-      //animation: 4s dropShadow ease infinite
       @media screen and (max-width: 700px)
         background: url("../img/counter-bg-mob.png") no-repeat 0 0/contain
   &__score
@@ -858,7 +822,6 @@ body, body.light
   display: inline-block
   cursor: pointer
   text-shadow: 2px 5px 4px rgba($black, 0.25)
-  //border-radius: 80px
   position: relative
   z-index: 3
   transition: filter .5s ease-in-out
@@ -955,5 +918,3 @@ body, body.light
         font-size: 11px
       @media screen and (max-width: 400px)
         font-size: 10px
-
-
