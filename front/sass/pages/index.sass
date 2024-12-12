@@ -60,13 +60,16 @@ body.dark
         background: linear-gradient(180deg, rgba(12, 12, 12, 0.00) 0%, #0C0C0C 100%)
     .right-decor
       &::before
-        bottom: 4vw
+        bottom: 0
+        height: 40%
         @media screen and (max-width: 1024px)
           bottom: 0
           width: 100%
     .left-decor
       &::before
-        bottom: 5vw
+        bottom: 0
+        height: 40%
+        width: 50%
         @media screen and (max-width: 1024px)
           bottom: 0
           width: 100%
@@ -133,7 +136,7 @@ body.dark
           background: url("../img/table-decor-tab-top-dark.png") no-repeat 0 0/cover
           @media screen and (max-width: 700px) and (orientation: portrait)
             background: url("../img/table-decor-tab-top-dark.png") no-repeat 0 0/contain
-            bottom: 70px
+            bottom: 130px
 
 
       .tableResults
@@ -650,7 +653,7 @@ body, body.light
     background: rgba(4, 0, 53, 0.45)
     backdrop-filter: blur(28px)
   &__head
-    padding: 30px 10px 30px 60px
+    padding: 30px 10px 30px 40px
     border-bottom: 0.5px solid rgba($white, 0.12)
     display: flex
     &-col
@@ -663,17 +666,16 @@ body, body.light
       text-shadow: 0px 4px 6px #000D23, 0px 0px 15px #0331F8, 0px 0px 15px #0331F8, 0px 5px 0px #333D48
       &:nth-child(1)
         width: 18%
-        text-align: left
       &:nth-child(2)
-        width: 28%
+        width: 30%
       &:nth-child(3)
         width: 23%
       &:nth-child(4)
-        width: 20%
+        width: 24%
         text-align: center
   &__body
     margin: 20px 27px 0 0
-    padding: 0 32px 0 60px
+    padding: 0 10px 0 60px
     overflow-y: scroll
     position: relative
     max-height: 495px
@@ -947,5 +949,11 @@ body, body.light
           display: none
         &.en
           display: block
+  .tableResults
+    &__head-col
+      @media screen and (max-width: 700px)
+        font-size: 11px
+      @media screen and (max-width: 400px)
+        font-size: 10px
 
 
